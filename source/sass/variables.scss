@@ -1,0 +1,38 @@
+// Colors
+// ---------------------------------
+$color-charcoal:                    #484848;
+$color-white:                       #ffffff;
+$color-cerulean-blue:               #316dc2;
+$color-alabaster:                   #f0efe9;
+$color-endeavour:                   #275699;
+$color-mischka:                     #a9afb7;
+
+$color-text-default:                $color-charcoal;
+$color-background-default:          $color-alabaster;
+
+// Gradient
+
+// Typography
+// ---------------------------------
+
+$fz-default:                        16px;
+$fz-line-height-default:            162.5%;
+$ff-placeholder:                    "Manrope", "Arial", sans-serif;
+
+// Animation
+// ---------------------------------
+
+$tf-default:                        ease;
+$trans-default:                     300ms $tf-default;
+
+// Viewports
+// ---------------------------------
+
+$desktop-to-tablet:                 1440px;
+$tablet-to-mobile:                  768px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi:                        144dpi;
+$retina-dppx:                       1.5dppx;
