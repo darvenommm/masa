@@ -135,3 +135,11 @@ button {
   cursor: pointer;
   user-select: none;
 }
+
+a,
+button,
+input {
+  color: inherit;
+  font-size: inherit;
+  font-family: $ff-placeholder;
+}

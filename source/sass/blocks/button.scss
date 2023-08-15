@@ -1,0 +1,84 @@
+.button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  border-radius: 30px;
+  background-color: $color-white;
+  transition: background-color $trans-default;
+
+  border: 1px solid $color-cerulean-blue;
+  margin: 0;
+  padding: 4px;
+  padding-left: 20px;
+
+  @include hover-focus {
+    background-color: $color-cerulean-blue;
+
+    .button__text {
+      color: $color-white;
+    }
+
+    .button__icon {
+      color: $color-cerulean-blue;
+
+      background-color: $color-white;
+    }
+  }
+
+  @include active {
+    background-color: $color-cerulean-blue;
+
+    .button__text {
+      color: rgba($color-white, 0.7);
+    }
+
+    .button__icon {
+      color: rgba($color-cerulean-blue, 0.7);
+
+      background-color: $color-white;
+    }
+  }
+
+  @include disabled {
+    cursor: not-allowed;
+    border-color: $color-disabled-default;
+
+    .button__text {
+      color: $color-disabled-default;
+    }
+
+    .button__icon {
+      color: $color-white;
+
+      background-color: $color-disabled-default;
+    }
+  }
+}
+
+.button__text {
+  color: $color-cerulean-blue;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+
+  transition: color $trans-default;
+}
+
+.button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-white;
+
+  transition: background-color $trans-default, color $trans-default;
+  background-color: $color-cerulean-blue;
+  border-radius: 50%;
+
+  width: 46px;
+  height: 46px;
+}

@@ -11,14 +11,98 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        header
+      <header class="header">
+        <div class="container">
+          <div class="header__container">
+            <a class="header__logo" href="./">
+              <span class="visually-hidden">Логотип нашего сайта.</span>
+              <svg width="28" height="28" aria-hidden="true">
+                <use xlink:href="./img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__button-container">
+              <button class="header__button button" id="header__button" type="button">
+                <span class="visually-hidden" id="header__button-aria-text">Нажми, чтобы открыть меню.</span>
+                <span class="header__button-text button__text">Меню</span>
+                <span class="header__button-icon button__icon">
+                  <svg class="header__open-icon" width="16" height="8" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#open-menu"></use>
+                  </svg>
+                  <svg class="header__close-icon" width="16" height="16" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#close-menu"></use>
+                  </svg>
+                </span>
+              </button>
+              <nav class="header__navigation" id="header__menu">
+                <ul class="header__links">
+                  <li class="header__link-item">
+                    <a class="header__link" href="#">О&nbsp;проекте</a>
+                  </li>
+                  <li class="header__link-item">
+                    <button class="header__link" href="#" type="button">
+                      Программы
+                      <svg width="11" height="5" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <ul class="header__inner-links">
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Стажировка</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Волонтёрство</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Учёба</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Религия</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__link-item">
+                    <a class="header__link" href="#">Как поехать</a>
+                  </li>
+                  <li class="header__link-item">
+                    <a class="header__link" href="#">Отзывы</a>
+                  </li>
+                  <li class="header__link-item">
+                    <button class="header__link" href="#" type="button">
+                      Новости
+                      <svg width="11" height="5" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-down"></use>
+                      </svg>
+                    </button>
+                    <ul class="header__inner-links">
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Общее</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Волонтёрство</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Стажировка</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Карьера</a>
+                      </li>
+                      <li class="header__inner-link-item">
+                        <a href="#" class="header__link header__inner-link">Путешествия</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="header__link-item">
+                    <a class="header__link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
       </header>
       <main>
-        main
       </main>
       <footer>
-        footer
       </footer>
     </div>
     <script src="js/vendor.min.js"></script>

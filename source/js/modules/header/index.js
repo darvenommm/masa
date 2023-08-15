@@ -1,0 +1,1 @@
+export {addBurgerHandlers} from './burger';
