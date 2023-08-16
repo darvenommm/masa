@@ -1,0 +1,291 @@
+.hero {
+  position: relative;
+
+  padding: 409px 0 60px;
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background-color: rgba($color-cerulean-blue, 0.2);
+
+    content: "";
+  }
+
+  &::after {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background-color: $color-echo-blue;
+
+    content: "";
+  }
+
+  .hero__first-background,
+  .hero__second-background,
+  .hero__third-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    display: flex;
+
+    transition: opacity $trans-default;
+    opacity: 1;
+  }
+
+  .hero__second-background,
+  .hero__third-background {
+    opacity: 0;
+  }
+
+  &--second-picture {
+    .hero__first-background,
+    .hero__third-background {
+      opacity: 0;
+    }
+
+    .hero__second-background {
+      opacity: 1;
+    }
+  }
+
+  &--third-picture {
+    .hero__first-background,
+    .hero__second-background {
+      opacity: 0;
+    }
+
+    .hero__third-background {
+      opacity: 1;
+    }
+  }
+
+  @include tablet {
+    padding-top: 676px;
+  }
+
+  @include mobile {
+    padding: 233px 0 20px;
+  }
+}
+
+.hero__slides {
+  display: flex;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.hero__pagination-buttons {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: repeat(3, 10px);
+  gap: 12px;
+
+  list-style: none;
+  border-radius: 20px 20px 0 0;
+  background-color: $color-white;
+
+  width: 94px;
+  padding: 14px 20px;
+  margin: 0;
+
+  & > li:first-child::before {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20C8.95431 20 0 11.0457 0 0V20H20Z' fill='white'/%3E%3C/svg%3E");
+
+    width: 20px;
+    height: 20px;
+
+    content: "";
+  }
+
+  @include mobile {
+    padding: 10px 16px;
+
+    & > li:first-child::before {
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10C4.47715 10 0 5.52285 0 0V10H10Z' fill='white'/%3E%3C/svg%3E");
+
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
+.hero__pagination-button {
+  border-radius: 50%;
+
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+  border: 1px solid $color-cerulean-blue;
+
+  &--active {
+    background-color: $color-cerulean-blue;
+  }
+
+  @include mobile {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.hero__title {
+  color: $color-cerulean-blue;
+  font-size: 54px;
+  font-weight: 400;
+  line-height: 114.81%;
+
+  background-color: $color-white;
+  border-radius: 0 30px 30px 0;
+
+  max-width: 78.23%;
+  margin: 0;
+  padding: 40px 50px 30px;
+
+  @include tablet {
+    font-size: 36px;
+    line-height: 122.22%;
+
+    max-width: 98.65%;
+    padding: 30px 40px 24px;
+  }
+
+  @include mobile {
+    font-size: 22px;
+    line-height: 118.18%;
+
+    max-width: none;
+    padding: 20px 14px 16px;
+  }
+}
+
+.hero__content {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 30px;
+
+  background-color: $color-white;
+  border-radius: 0 0 30px 30px;
+
+  max-width: 62.58%;
+  padding: 0 50px 35px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M26 0C11.6406 0 0 11.6406 0 26V0H26Z' fill='white'/%3E%3C/svg%3E");
+
+    width: 26px;
+    height: 26px;
+
+    content: "";
+  }
+
+  @include tablet {
+    max-width: 88.47%;
+    padding: 0 40px 35px;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0;
+
+    background-color: $transparent;
+
+    max-width: none;
+    padding: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.hero__description {
+  margin: 0;
+
+  @include tablet {
+    line-height: 125%;
+  }
+
+  @include mobile {
+    position: relative;
+
+    font-size: 14px;
+    line-height: 142.86%;
+
+    background-color: $color-white;
+    border-radius: 0 0 14px 0;
+
+    max-width: 90%;
+    padding: 0 14px 15px;
+
+    &::before {
+      position: absolute;
+      left: 100%;
+      top: -2px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.47715 0 0 4.47715 0 10V0H10Z' fill='white'/%3E%3C/svg%3E");
+
+      width: 10px;
+      height: 10px;
+
+      content: "";
+    }
+  }
+}
+
+.hero__button-container {
+  @include mobile {
+    position: relative;
+
+    background-color: $color-white;
+    border-radius: 0 0 14px 14px;
+
+    padding: 10px 15px;
+
+    &::before {
+      position: absolute;
+      left: 100%;
+      top: -2px;
+
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 0C4.47715 0 0 4.47715 0 10V0H10Z' fill='white'/%3E%3C/svg%3E");
+
+      width: 10px;
+      height: 10px;
+
+      content: "";
+    }
+  }
+}
+
+.hero__backgrounds {
+  picture {
+    display: flex;
+
+    width: 100%;
+  }
+
+  img {
+    object-fit: cover;
+
+    width: 100vw;
+    height: auto;
+  }
+}

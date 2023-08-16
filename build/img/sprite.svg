@@ -1,5 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="arrow-down" viewBox="0 0 12 7"><g fill="none">
 <path opacity="0.6" d="M11.454 0.818115L5.99947 5.72721L0.544922 0.818115" stroke="currentColor"/>
+</g></symbol><symbol id="arrow-top-right" viewBox="0 0 10 10"><g fill="none">
+<path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="currentColor"/>
 </g></symbol><symbol id="close-menu" viewBox="0 0 18 18"><g fill="none">
 <path d="M1 17L9 9M9 9L17 1M9 9L17 17M9 9L1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="logo" viewBox="0 0 28 28"><g fill="none">

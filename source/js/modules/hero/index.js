@@ -1,0 +1,1 @@
+export {initHeroSlider} from './slider';

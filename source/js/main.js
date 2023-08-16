@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 
 import {addBurgerHandlers} from './modules/header';
+import {initHeroSlider} from './modules/hero';
 
 // ---------------------------------
 
@@ -19,6 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     // header
     addBurgerHandlers();
+
+    // hero
+    initHeroSlider();
 
     initModals();
 
