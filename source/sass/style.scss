@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // Vendor
 // ---------------------------------
 
@@ -17,6 +19,9 @@
 
 // Blocks
 // ---------------------------------
+@import "blocks/modal";
 @import "blocks/button";
+@import "blocks/text-input";
 @import "blocks/header";
 @import "blocks/hero";
+@import "blocks/about";

@@ -1,0 +1,26 @@
+.text-input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  label {
+    font-size: 14px;
+    line-height: 128.57%;
+  }
+
+  input {
+    font-size: 16px;
+    line-height: 100%;
+
+    border-radius: 8px;
+
+    padding: 10px 20px;
+    border: 1px solid rgba($color-charcoal, 0.3);
+
+    &::placeholder {
+      color: $color-placeholder;
+      font-size: 16px;
+      line-height: 100%;
+    }
+  }
+}

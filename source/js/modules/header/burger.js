@@ -32,7 +32,7 @@ export const addBurgerHandlers = () => {
     menu.classList.remove(ACTIVE_MENU_CLASS);
 
     parent.removeEventListener('click', parentClickHandler);
-    document.body.style.overflow = '';
+    window.scrollLock.enableScrolling();
   };
 
   const openMenu = () => {
@@ -41,7 +41,7 @@ export const addBurgerHandlers = () => {
     menu.classList.add(ACTIVE_MENU_CLASS);
 
     parent.addEventListener('click', parentClickHandler);
-    document.body.style.overflow = 'hidden';
+    window.scrollLock.disableScrolling();
   };
 
   const buttonClickHandler = () => {
