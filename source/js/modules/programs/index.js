@@ -1,0 +1,1 @@
+export {initProgramsSlider} from './slider';

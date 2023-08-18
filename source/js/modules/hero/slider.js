@@ -1,7 +1,6 @@
 import {isMobile} from 'is-mobile';
 
 import Swiper from '../../vendor/swiper';
-import {getCurrentDataIndex} from '../../utils/swiper';
 
 const SLIDER_SELECTOR = '#hero__slider';
 const PARENT_SELECTOR = '.hero';
@@ -62,7 +61,7 @@ const sliderChangeHandler = (swiper) => {
     return;
   }
 
-  const currentSlideIndex = getCurrentDataIndex(swiper);
+  const currentSlideIndex = swiper.realIndex;
   const currentClass = heroClasses[currentSlideIndex];
 
   clearParentFromClasses(parent);

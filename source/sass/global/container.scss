@@ -2,13 +2,13 @@
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 100px;
+  padding: 0 $container-desktop-padding;
 
   @include tablet {
-    padding: 0 45px;
+    padding: 0 $container-tablet-padding;
   }
 
   @include mobile {
-    padding: 0 15px;
+    padding: 0 $container-mobile-padding;
   }
 }

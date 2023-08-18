@@ -1,0 +1,280 @@
+.programs {
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    position: relative;
+
+    padding-bottom: 67px;
+  }
+}
+
+.programs__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 46px;
+
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    margin-bottom: 30px;
+  }
+}
+
+.programs__title {
+  color: $color-cerulean-blue;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 100%;
+
+  margin: 0;
+
+  @include tablet {
+    font-size: 34px;
+    line-height: 147.06%;
+  }
+
+  @include mobile {
+    font-size: 20px;
+    line-height: 100%;
+
+    width: 50%;
+  }
+}
+
+.programs__link {
+  @include mobile {
+    display: none;
+  }
+}
+
+.programs__slider {
+  margin-bottom: 40px;
+
+  @include tablet {
+    overflow: visible;
+  }
+
+  @include mobile {
+    overflow: hidden;
+
+    margin-bottom: 30px;
+  }
+}
+
+.programs__cards {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.programs__card {
+  $border-radius: 12px;
+
+  position: relative;
+
+  border-radius: $border-radius;
+
+  padding: 280px 51px 20px 20px;
+
+  picture {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    display: flex;
+  }
+
+  img {
+    border-radius: $border-radius;
+
+    width: 100%;
+  }
+
+  &::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    border-radius: $border-radius;
+    background-color: rgba($color-cerulean-blue, 0.2);
+
+    content: "";
+  }
+
+  @include tablet {
+    padding: 285px 41px 20px 20px;
+  }
+
+  @include mobile {
+    padding: 271px 10px 15px;
+  }
+}
+
+.programs__subtitle {
+  display: inline-block;
+
+  color: $color-cerulean-blue;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 108.33%;
+
+  border-radius: 12px 12px 0 0;
+  background-color: $color-white;
+
+  margin: 0;
+  padding: 18px;
+  padding-bottom: 6px;
+  min-width: 194px;
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 120%;
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 112.5%;
+
+    padding: 18px;
+    padding-bottom: 6px;
+  }
+}
+
+.programs__texts {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  background-color: $color-white;
+  border-radius: 0 12px 12px 12px;
+
+  padding: 12px 18px 15px;
+  min-height: 79px;
+
+  @include tablet {
+    min-height: 86px;
+  }
+}
+
+.programs__text {
+  font-size: 14px;
+  line-height: 128.57%;
+
+  margin: 0;
+
+  @include tablet {
+    line-height: 142.86%;
+  }
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 116.67%;
+  }
+}
+
+.programs__card-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-white;
+
+  border-radius: 50%;
+  background-color: $color-cerulean-blue;
+
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+}
+
+.programs__controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 52px;
+}
+
+.programs__scrollbar {
+  position: relative;
+
+  background-color: rgba($color-cerulean-blue, 0.2);
+
+  flex-grow: 1;
+  height: 2px;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: width $trans-default;
+    background-color: $color-cerulean-blue;
+
+    height: 2px;
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.programs__buttons {
+  display: flex;
+  gap: 10px;
+
+  @include mobile {
+    position: absolute;
+    top: 0;
+    right: $container-mobile-padding;
+  }
+}
+
+.programs__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-cerulean-blue;
+
+  background-color: inherit;
+
+  width: 22px;
+  height: 22px;
+  border: none;
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}
+
+.programs__bottom-link {
+  display: none;
+
+  width: 203px;
+  padding-left: 30px;
+
+  .programs__bottom-link-text {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
+
+  .programs__bottom-link-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  @include mobile {
+    display: flex;
+    gap: 29px;
+  }
+}

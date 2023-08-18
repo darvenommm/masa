@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 
 import {addBurgerHandlers} from './modules/header';
 import {initHeroSlider} from './modules/hero';
+import {initProgramsSlider} from './modules/programs';
 
 // ---------------------------------
 
@@ -23,6 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // hero
     initHeroSlider();
+
+    // programs
+    initProgramsSlider();
 
     initModals();
 
