@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .roadmap {
   color: $color-white;
 
@@ -86,7 +88,7 @@
 }
 
 .roadmap__picture {
-  $border-radius: 16px;
+  $border-radius: 18px;
 
   border-radius: $border-radius;
 
