@@ -207,24 +207,6 @@
 }
 
 .programs__scrollbar {
-  position: relative;
-
-  background-color: rgba($color-cerulean-blue, 0.2);
-
-  flex-grow: 1;
-  height: 2px;
-
-  span {
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    transition: width $trans-default;
-    background-color: $color-cerulean-blue;
-
-    height: 2px;
-  }
-
   @include mobile {
     display: none;
   }
@@ -238,24 +220,6 @@
     position: absolute;
     top: 0;
     right: $container-mobile-padding;
-  }
-}
-
-.programs__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: $color-cerulean-blue;
-
-  background-color: inherit;
-
-  width: 22px;
-  height: 22px;
-  border: none;
-
-  &--right {
-    transform: rotate(180deg);
   }
 }
 

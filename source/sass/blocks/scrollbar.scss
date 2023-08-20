@@ -1,0 +1,19 @@
+.scrollbar {
+  position: relative;
+
+  background-color: rgba($color-cerulean-blue, 0.2);
+
+  flex-grow: 1;
+  height: 2px;
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: width $trans-default;
+    background-color: $color-cerulean-blue;
+
+    height: 2px;
+  }
+}

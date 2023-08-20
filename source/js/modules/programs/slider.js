@@ -1,18 +1,16 @@
 import Slider from '../../vendor/swiper';
 import {isMobile} from 'is-mobile';
 
-import {setNewScrollbarValue} from './scrollbar';
+import {SwiperScrollbar} from '../../utils/swiper/scrollbar';
 
 const SLIDER_SELECTOR = '#programs__slider';
 const PREV_BUTTON_SELECTOR = '#programs__slider-prev';
 const NEXT_BUTTON_SELECTOR = '#programs__slider-next';
-
-const sliderInitHandler = () => void setNewScrollbarValue();
-const sliderChangeHandler = (swiper) => {
-  setNewScrollbarValue(swiper.progress * 100);
-};
+const SCROLLBAR_SELECTOR = '#programs__scrollbar > span';
 
 export const initProgramsSlider = () => {
+  const scrollbar = new SwiperScrollbar(SCROLLBAR_SELECTOR);
+
   const slider = new Slider(SLIDER_SELECTOR, {
     autoHeight: true,
     allowTouchMove: isMobile({
@@ -36,8 +34,8 @@ export const initProgramsSlider = () => {
     },
 
     on: {
-      init: sliderInitHandler,
-      slideChange: sliderChangeHandler,
+      init: () => void scrollbar.swiperInitHandler(),
+      slideChange: (swiper) => void scrollbar.swiperChangeHandler(swiper.progress),
     },
 
     navigation: {

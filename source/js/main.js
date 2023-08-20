@@ -7,6 +7,7 @@ import {addBurgerHandlers} from './modules/header';
 import {initHeroSlider} from './modules/hero';
 import {initProgramsSlider} from './modules/programs';
 import {addQuestionsHandlers} from './modules/questions';
+import {initReviewsSlider} from './modules/reviews';
 
 // ---------------------------------
 
@@ -33,8 +34,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // questions
     addQuestionsHandlers();
 
+    // questions
     initAccordions();
 
+    // reviews
+    initReviewsSlider();
+
+    // other
     initModals();
 
     const form = new Form();

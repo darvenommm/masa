@@ -688,18 +688,18 @@
               </ul>
             </div>
             <div class="programs__controls">
-              <div class="programs__scrollbar" id="programs__scrollbar" aria-hidden="true">
+              <div class="scrollbar programs__scrollbar" id="programs__scrollbar" aria-hidden="true">
                 <!-- for js  -->
                 <span></span>
               </div>
               <div class="programs__buttons">
-                <button class="programs__button" id="programs__slider-prev" type="button">
+                <button class="control-button" id="programs__slider-prev" type="button">
                   <span class="visually-hidden">Нажми, чтобы перейти на предыдущую программу.</span>
                   <svg width="10" height="10" aria-hidden="true">
                     <use xlink:href="./img/sprite.svg#arrow-left"></use>
                   </svg>
                 </button>
-                <button class="programs__button programs__button--right" id="programs__slider-next" type="button">
+                <button class="control-button control-button--right" id="programs__slider-next" type="button">
                   <span class="visually-hidden">Нажми, чтобы на следующую программу.</span>
                   <svg width="10" height="10" aria-hidden="true">
                     <use xlink:href="./img/sprite.svg#arrow-left"></use>
@@ -939,6 +939,254 @@
                 </div>
               </li>
             </ul>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="container">
+            <h2 class="reviews__title">Отзывы</h2>
+            <div class="reviews__slider swiper" id="reviews__slider">
+              <ul class="reviews__slides swiper-wrapper">
+                <li class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <div class="reviews__author">
+                      <picture>
+                        <source
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/woman@2x.webp 2x, ./img/reviews/woman@1x.webp 1x"
+                          type="image/webp"
+                        >
+                        <img
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/woman@2x.jpg 2x, ./img/reviews/woman@1x.jpg 1x"
+                          src="./img/reviews/woman@1x.jpg"
+                          alt="Женщина."
+                        >
+                      </picture>
+                      <p class="reviews__name">Сара Аврахам</p>
+                    </div>
+                    <div class="reviews__info">
+                      <div>
+                        <p class="reviews__info-title">программа</p>
+                        <p class="reviews__info-text">Masa Art Challenge</p>
+                      </div>
+                      <div>
+                        <p class="reviews__info-title">Дата</p>
+                        <p class="reviews__info-text">Осень 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews__subtitle">
+                    Я&nbsp;могу с&nbsp;уверенностью сказать, что это был один
+                    из&nbsp;самых незабываемых опытов в&nbsp;жизни!
+                  </p>
+                  <p class="reviews__text">
+                    Я&nbsp;рекомендую программу &laquo;Маса&raquo; всем
+                    израильским студентам, желающим получить незабываемые
+                    впечатления. Сочетание путешествий, общения и&nbsp;значимой
+                    работы действительно отличает её&nbsp;от&nbsp;других
+                    программ, и&nbsp;я&nbsp;чувствую огромную благодарность
+                    за&nbsp;предоставленную мне возможность.
+                  </p>
+                </li>
+                <li class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <div class="reviews__author">
+                      <picture>
+                        <source
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.webp 2x, ./img/reviews/man@1x.webp 1x"
+                          type="image/webp"
+                        >
+                        <img
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.jpg 2x, ./img/reviews/man@1x.jpg 1x"
+                          src="./img/reviews/man@1x.jpg"
+                          alt="Мужчина."
+                        >
+                      </picture>
+                      <p class="reviews__name">Давид Иммервар</p>
+                    </div>
+                    <div class="reviews__info">
+                      <div>
+                        <p class="reviews__info-title">программа</p>
+                        <p class="reviews__info-text">Volunteer Chance</p>
+                      </div>
+                      <div>
+                        <p class="reviews__info-title">Дата</p>
+                        <p class="reviews__info-text">Лето 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews__subtitle">
+                    Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.
+                  </p>
+                  <p class="reviews__text">
+                    Каждый день был возможностью оказать ощутимое влияние
+                    на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал
+                    эту волонтерскую программу всем, кто ищет значимый
+                    и&nbsp;незабываемый опыт. Организация была на&nbsp;высшем
+                    уровне. Для меня было честью быть частью такой удивительной
+                    инициативы.
+                  </p>
+                </li>
+                <li class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <div class="reviews__author">
+                      <picture>
+                        <source
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.webp 2x, ./img/reviews/man@1x.webp 1x"
+                          type="image/webp"
+                        >
+                        <img
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.jpg 2x, ./img/reviews/man@1x.jpg 1x"
+                          src="./img/reviews/man@1x.jpg"
+                          alt="Мужчина."
+                        >
+                      </picture>
+                      <p class="reviews__name">Давид Иммервар</p>
+                    </div>
+                    <div class="reviews__info">
+                      <div>
+                        <p class="reviews__info-title">программа</p>
+                        <p class="reviews__info-text">Volunteer Chance</p>
+                      </div>
+                      <div>
+                        <p class="reviews__info-title">Дата</p>
+                        <p class="reviews__info-text">Лето 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews__subtitle">
+                    Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.
+                  </p>
+                  <p class="reviews__text">
+                    Каждый день был возможностью оказать ощутимое влияние
+                    на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал
+                    эту волонтерскую программу всем, кто ищет значимый
+                    и&nbsp;незабываемый опыт. Организация была на&nbsp;высшем
+                    уровне. Для меня было честью быть частью такой удивительной
+                    инициативы.
+                  </p>
+                </li>
+                <li class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <div class="reviews__author">
+                      <picture>
+                        <source
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.webp 2x, ./img/reviews/man@1x.webp 1x"
+                          type="image/webp"
+                        >
+                        <img
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.jpg 2x, ./img/reviews/man@1x.jpg 1x"
+                          src="./img/reviews/man@1x.jpg"
+                          alt="Мужчина."
+                        >
+                      </picture>
+                      <p class="reviews__name">Давид Иммервар</p>
+                    </div>
+                    <div class="reviews__info">
+                      <div>
+                        <p class="reviews__info-title">программа</p>
+                        <p class="reviews__info-text">Volunteer Chance</p>
+                      </div>
+                      <div>
+                        <p class="reviews__info-title">Дата</p>
+                        <p class="reviews__info-text">Лето 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews__subtitle">
+                    Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.
+                  </p>
+                  <p class="reviews__text">
+                    Каждый день был возможностью оказать ощутимое влияние
+                    на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал
+                    эту волонтерскую программу всем, кто ищет значимый
+                    и&nbsp;незабываемый опыт. Организация была на&nbsp;высшем
+                    уровне. Для меня было честью быть частью такой удивительной
+                    инициативы.
+                  </p>
+                </li>
+                <li class="reviews__slide swiper-slide">
+                  <div class="reviews__slide-top">
+                    <div class="reviews__author">
+                      <picture>
+                        <source
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.webp 2x, ./img/reviews/man@1x.webp 1x"
+                          type="image/webp"
+                        >
+                        <img
+                          width="90"
+                          height="90"
+                          srcset="./img/reviews/man@2x.jpg 2x, ./img/reviews/man@1x.jpg 1x"
+                          src="./img/reviews/man@1x.jpg"
+                          alt="Мужчина."
+                        >
+                      </picture>
+                      <p class="reviews__name">Давид Иммервар</p>
+                    </div>
+                    <div class="reviews__info">
+                      <div>
+                        <p class="reviews__info-title">программа</p>
+                        <p class="reviews__info-text">Volunteer Chance</p>
+                      </div>
+                      <div>
+                        <p class="reviews__info-title">Дата</p>
+                        <p class="reviews__info-text">Лето 2022</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="reviews__subtitle">
+                    Благодаря опыту стажировки я&nbsp;узнал так много нового
+                    о&nbsp;себе и&nbsp;об&nbsp;окружающем мире.
+                  </p>
+                  <p class="reviews__text">
+                    Каждый день был возможностью оказать ощутимое влияние
+                    на&nbsp;жизнь других людей. Я&nbsp;бы очень рекомендовал
+                    эту волонтерскую программу всем, кто ищет значимый
+                    и&nbsp;незабываемый опыт. Организация была на&nbsp;высшем
+                    уровне. Для меня было честью быть частью такой удивительной
+                    инициативы.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="reviews__controls">
+              <div class="scrollbar reviews__scrollbar" id="reviews__scrollbar" aria-hidden="true">
+                <span></span>
+              </div>
+              <div class="reviews__buttons">
+                <button class="control-button" id="reviews__slider-prev" type="button">
+                  <span class="visually-hidden">Нажми, чтобы перейти на предыдущую программу.</span>
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+                <button class="control-button control-button--right" id="reviews__slider-next" type="button">
+                  <span class="visually-hidden">Нажми, чтобы на следующую программу.</span>
+                  <svg width="10" height="10" aria-hidden="true">
+                    <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
         </section>
       </main>

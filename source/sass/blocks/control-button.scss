@@ -1,0 +1,17 @@
+.control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: $color-cerulean-blue;
+
+  background-color: inherit;
+
+  width: 22px;
+  height: 22px;
+  border: none;
+
+  &--right {
+    transform: rotate(180deg);
+  }
+}
