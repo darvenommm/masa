@@ -8,6 +8,7 @@ import {initHeroSlider} from './modules/hero';
 import {initProgramsSlider} from './modules/programs';
 import {addQuestionsHandlers} from './modules/questions';
 import {initReviewsSlider} from './modules/reviews';
+import {createContactsMap} from './modules/contacts';
 
 // ---------------------------------
 
@@ -39,6 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // reviews
     initReviewsSlider();
+
+    // contacts
+    createContactsMap();
 
     // other
     initModals();

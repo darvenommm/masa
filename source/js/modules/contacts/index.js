@@ -1,0 +1,1 @@
+export {createContactsMap} from './map';
