@@ -2,16 +2,6 @@ $questions__animation-time: 200ms;
 
 .questions {
   overflow-y: hidden;
-
-  padding: 120px 0;
-
-  @include tablet {
-    padding: 100px 0;
-  }
-
-  @include mobile {
-    padding: 67px 0;
-  }
 }
 
 .questions__title {

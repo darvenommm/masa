@@ -1,0 +1,107 @@
+.page__header {
+  padding-top: 20px;
+}
+
+.page__hero {
+  padding: 409px 0 60px;
+
+  @include tablet {
+    padding-top: 676px;
+  }
+
+  @include mobile {
+    padding: 233px 0 20px;
+  }
+}
+
+.page__about {
+  padding: 131px 0 132px;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 67px 0;
+  }
+}
+
+.page__programs {
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 67px;
+  }
+}
+
+.page__roadmap {
+  padding: 120px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 67px 0;
+  }
+}
+
+.page__questions {
+  padding: 120px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 67px 0;
+  }
+}
+
+.page__reviews {
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-bottom: 100px;
+  }
+
+  @include mobile {
+    padding-bottom: 67px;
+  }
+}
+
+.page__contacts {
+  padding: 120px 0;
+
+  @include tablet {
+    padding: 100px 0;
+  }
+
+  @include mobile {
+    padding: 67px 0;
+  }
+}
+
+.page__form {
+  padding: 120px 0 60px;
+
+  @include tablet {
+    padding: 100px 0 60px;
+  }
+
+  @include mobile {
+    padding: 67px 0 29px;
+  }
+}
+
+.page__footer {
+  padding-bottom: 50px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
+}

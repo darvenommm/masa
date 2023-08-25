@@ -1,21 +1,5 @@
 @use "sass:math";
 
-.about {
-  padding: 131px 0 132px;
-
-  @include tablet {
-    padding: 100px 0;
-  }
-
-  @include mobile {
-    padding: 60px 0;
-  }
-
-  @include mobile {
-    padding: 72px 0 67px;
-  }
-}
-
 .about__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

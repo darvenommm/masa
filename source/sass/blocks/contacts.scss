@@ -2,16 +2,6 @@
   color: $color-white;
 
   background-color: $color-cerulean-blue;
-
-  padding: 120px 0;
-
-  @include tablet {
-    padding: 100px 0;
-  }
-
-  @include mobile {
-    padding: 67px 0;
-  }
 }
 
 .contacts__top {

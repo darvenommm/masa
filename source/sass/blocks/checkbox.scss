@@ -41,16 +41,66 @@ $checkbox__trans-time: 200ms;
       background-color $checkbox__trans-time,
       border-color $checkbox__trans-time;
 
-    border: 1px solid $color-text-default;
+    border: 1px solid rgba($color-text-default, 0.7);
     width: 20px;
     height: 20px;
   }
 
-  input:checked + label[data-checkbox="icon"] {
-    color: $color-white;
+  @include hover-focus {
+    label[data-checkbox="icon"] {
+      border-color: $color-text-default;
+    }
+  }
 
-    background-color: $color-cerulean-blue;
-    border-color: $color-cerulean-blue;
+  @include disabled {
+    position: relative;
+
+    label[data-checkbox="icon"] {
+      background-color: rgba($color-disabled-default, 0.3);
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      cursor: not-allowed;
+
+      content: "";
+    }
+
+    input:checked + label[data-checkbox="icon"] {
+      color: $color-white;
+
+      border-color: $color-disabled-default;
+      background-color: $color-disabled-default;
+    }
+  }
+
+  input:checked {
+    & + label[data-checkbox="icon"] {
+      color: $color-white;
+
+      background-color: $color-cerulean-blue;
+      border-color: $color-cerulean-blue;
+    }
+
+    @include hover-focus {
+      & + label[data-checkbox="icon"] {
+        color: $color-text-default;
+
+        background-color: transparent;
+        border-color: $color-text-default;
+      }
+    }
+  }
+
+  &.is-invalid {
+    label[data-checkbox="icon"] {
+      border-color: $color-error;
+      background-color: rgba($color-error, 0.2);
+      opacity: 0.7;
+    }
   }
 
   .input-message {
@@ -63,15 +113,41 @@ $checkbox__trans-time: 200ms;
 
   &--light {
     label[data-checkbox="icon"] {
-      background-color: transparent;
+      background-color: $transparent;
 
       border: 1px solid rgba($color-white, 0.7);
     }
 
-    input:checked + label[data-checkbox="icon"] {
-      color: $color-cerulean-blue;
+    @include hover-focus {
+      label[data-checkbox="icon"] {
+        border-color: $color-white;
+      }
+    }
 
-      background-color: $color-white;
+    @include disabled {
+      label[data-checkbox="icon"] {
+        border-color: $color-white;
+        background-color: rgba($color-white, 0.6);
+        opacity: 1;
+      }
+    }
+
+    input:checked {
+      & + label[data-checkbox="icon"] {
+        color: $color-cerulean-blue;
+
+        background-color: $color-white;
+        border-color: $color-white;
+      }
+
+      @include hover-focus {
+        & + label[data-checkbox="icon"] {
+          color: $color-white;
+
+          background-color: $transparent;
+          border-color: $color-white;
+        }
+      }
     }
   }
 }

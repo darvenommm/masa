@@ -52,8 +52,16 @@
   line-height: 100%;
 
   background-color: $color-white;
+  transition: color $trans-default, background-color $trans-default;
 
   padding: 17px 20px;
+
+  @include hover-focus {
+    color: $color-white;
+
+    border-color: $color-white;
+    background-color: $color-cerulean-blue;
+  }
 }
 
 .custom-select__icon {
@@ -75,5 +83,9 @@
 
   .custom-select__item {
     color: $color-text-default;
+  }
+
+  .custom-select__list {
+    border-color: $color-white;
   }
 }

@@ -1,8 +1,6 @@
 .hero {
   position: relative;
 
-  padding: 409px 0 60px;
-
   &::before {
     position: absolute;
     inset: 0;
@@ -61,14 +59,6 @@
     .hero__third-background {
       opacity: 1;
     }
-  }
-
-  @include tablet {
-    padding-top: 676px;
-  }
-
-  @include mobile {
-    padding: 233px 0 20px;
   }
 }
 
