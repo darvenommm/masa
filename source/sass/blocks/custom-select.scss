@@ -6,6 +6,10 @@
   &.is-invalid {
     margin-bottom: 25px;
 
+    .custom-select__button {
+      background-color: rgba($color-error, 0.2);
+    }
+
     .custom-select__icon {
       background-color: $color-error;
     }

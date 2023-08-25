@@ -134,8 +134,8 @@
                     <div class="hero__button-container">
                       <a class="hero__link button" href="#">
                         <span class="button__text">подробнее</span>
-                        <span class="button__icon">
-                          <svg width="8" height="8" aria-hidden="true">
+                        <span class="button__icon" aria-hidden="true">
+                          <svg width="8" height="8">
                             <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                           </svg>
                         </span>
@@ -172,8 +172,8 @@
                     <div class="hero__button-container">
                       <a class="hero__link button" href="#">
                         <span class="button__text">подробнее</span>
-                        <span class="button__icon">
-                          <svg width="8" height="8" aria-hidden="true">
+                        <span class="button__icon" aria-hidden="true">
+                          <svg width="8" height="8">
                             <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                           </svg>
                         </span>
@@ -211,8 +211,8 @@
                     <div class="hero__button-container">
                       <a class="hero__link button" href="#">
                         <span class="button__text">подробнее</span>
-                        <span class="button__icon">
-                          <svg width="8" height="8" aria-hidden="true">
+                        <span class="button__icon" aria-hidden="true">
+                          <svg width="8" height="8">
                             <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                           </svg>
                         </span>
@@ -1209,7 +1209,7 @@
                 </div>
                 <div class="contacts__item">
                   <p class="contacts__subtitle">E-mail</p>
-                  <a class="contacts__text" href="mailto:info@masa.ru">Info@masa.ru</a>
+                  <a class="contacts__text contacts__link" href="mailto:info@masa.ru">Info@masa.ru</a>
                 </div>
               </address>
             </div>
@@ -1287,7 +1287,14 @@
                       data-required="data-required"
                     >
                       <label for="form__name">Имя</label>
-                      <input id="form__name" type="text" name="name" autocapitalize="on" pattern="[a-zA-Zф-яА-ЯёЁ\-]+" required>
+                      <input
+                        id="form__name"
+                        type="text"
+                        name="name"
+                        autocapitalize="on"
+                        pattern="[a-zA-Zф-яА-ЯёЁ\-]+"
+                        required
+                      >
                     </div>
                     <div
                       class="text-input text-input--light"
@@ -1297,7 +1304,13 @@
                       data-required="data-required"
                     >
                       <label for="form__phone-number">Телефон</label>
-                      <input id="form__phone-number" name="phone-number" type="tel" pattern="/^\+?[1-9][0-9]{7,14}$/" required>
+                      <input
+                        id="form__phone-number"
+                        name="phone-number"
+                        type="tel"
+                        pattern="/^\+?[1-9][0-9]{7,14}$/"
+                        required
+                      >
                     </div>
                     <div class="text-input text-input--light">
                       <label for="form__message">Ваше сообщение</label>
@@ -1334,7 +1347,7 @@
                       </label>
                     </div>
                   </div>
-                  <button class="form__submit button" type="submit">
+                  <button class="form__submit button button--light" type="submit">
                     <span class="button__text">отправить</span>
                     <span class="button__icon">
                       <svg width="8" height="8" aria-hidden="true">
@@ -1397,8 +1410,8 @@
         >
           <button
             class="about-modal__close modal__close-btn"
-            type="button"
             data-close-modal="about-modal"
+            type="button"
           >
             <span class="visually-hidden">Закрыть модальное окно</span>
             <svg width="18" height="18" aria-hidden="true">
@@ -1426,7 +1439,15 @@
                 data-required="data-required"
               >
                 <label for="about-modal__name">Имя</label>
-                <input id="about-modal__name" type="text" name="name" autocapitalize="on" data-focus="about-modal__name" pattern="[a-zA-Zф-яА-ЯёЁ\-]+" required>
+                <input
+                  id="about-modal__name"
+                  type="text"
+                  name="name"
+                  autocapitalize="on"
+                  data-focus="about-modal__name"
+                  pattern="[a-zA-Zф-яА-ЯёЁ\-]+"
+                  required
+                >
               </div>
               <div
                 class="text-input"
@@ -1436,7 +1457,13 @@
                 data-required="data-required"
               >
                 <label for="about-modal__phone">Телефон</label>
-                <input id="about-modal__phone" type="tel" name="phone" pattern="/^\+?[1-9][0-9]{7,14}$/" required>
+                <input
+                  id="about-modal__phone"
+                  type="tel"
+                  name="phone"
+                  pattern="/^\+?[1-9][0-9]{7,14}$/"
+                  required
+                >
               </div>
               <div class="custom-select" data-select="data-select" data-validate-type="select" data-name="city" data-required="true">
                 <label class="custom-select__title">Выберите город</label>

@@ -10,7 +10,7 @@ const ICON_URL = '../img/svg/map-marker.svg';
 const ICON_SIZE = [70, 70];
 const ICON_ANCHOR = [40, 70];
 const POPUP_ANCHOR = [-6, -70];
-const POPUP_TEXT = 'Адрес: г. Новосибирск, ул. Щетинкина 68, культурный центр Бейт Менахем';
+const POPUP_TEXT = 'г. Новосибирск, ул. Щетинкина&nbsp;68, культурный центр &laquo;Бейт Менахем&raquo;';
 
 export const createContactsMap = () => {
   const mapElement = document.querySelector(MAP_ID);
@@ -39,8 +39,8 @@ export const createContactsMap = () => {
       }),
     });
 
-    marker
-        .addTo(map)
-        .bindPopup(POPUP_TEXT);
+    marker.addTo(map).bindPopup(POPUP_TEXT);
+
+    map.attributionControl.setPrefix('');
   }
 };

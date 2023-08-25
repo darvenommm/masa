@@ -1,6 +1,5 @@
 .button {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   gap: 20px;
 
@@ -59,6 +58,49 @@
   }
 }
 
+.button--light {
+  border-color: $color-white;
+  background-color: $color-cerulean-blue;
+
+  .button__text {
+    color: $color-white;
+  }
+
+  .button__icon {
+    color: $color-cerulean-blue;
+
+    background-color: $color-white;
+  }
+
+  @include hover-focus {
+    background-color: $color-white;
+
+    .button__text {
+      color: $color-cerulean-blue;
+    }
+
+    .button__icon {
+      color: $color-white;
+
+      background-color: $color-cerulean-blue;
+    }
+  }
+
+  @include active {
+    background-color: $color-white;
+
+    .button__text {
+      color: rgba($color-cerulean-blue, 0.7);
+    }
+
+    .button__icon {
+      color: $color-white;
+
+      background-color: $color-cerulean-blue;
+    }
+  }
+}
+
 .button__text {
   color: $color-cerulean-blue;
   font-size: 14px;
@@ -66,8 +108,11 @@
   line-height: 100%;
   letter-spacing: 0.28px;
   text-transform: uppercase;
+  text-align: center;
 
   transition: color $trans-default;
+
+  flex-grow: 1;
 }
 
 .button__icon {

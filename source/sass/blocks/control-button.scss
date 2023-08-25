@@ -5,7 +5,9 @@
 
   color: $color-cerulean-blue;
 
-  background-color: inherit;
+  border-radius: 50%;
+  background-color: $transparent;
+  transition: background-color $trans-default, color $trans-default;
 
   width: 22px;
   height: 22px;
@@ -13,5 +15,21 @@
 
   &--right {
     transform: rotate(180deg);
+  }
+
+  @include hover-focus {
+    background-color: $color-white;
+  }
+
+  @include active {
+    color: rgba($color-cerulean-blue, 0.7);
+
+    background-color: $color-white;
+  }
+
+  @include disabled {
+    color: $color-disabled-default;
+
+    cursor: not-allowed;
   }
 }

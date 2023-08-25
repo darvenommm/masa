@@ -26,12 +26,21 @@ export const addBurgerHandlers = () => {
 
   const linkClickHandler = () => void closeMenu();
 
+  const hideLinksForTab = () => {
+    links.forEach((link) => void (link.tabIndex = '-1'));
+  };
+
+  const openLinksForTab = () => {
+    links.forEach((link) => void (link.tabIndex = '0'));
+  };
+
   const closeMenu = () => {
     parent.classList.remove(ACTIVE_PARENT_CLASS);
     button.classList.remove(ACTIVE_BUTTON_CLASS);
     menu.classList.remove(ACTIVE_MENU_CLASS);
 
     parent.removeEventListener('click', parentClickHandler);
+    hideLinksForTab();
     window.scrollLock.enableScrolling();
   };
 
@@ -41,6 +50,7 @@ export const addBurgerHandlers = () => {
     menu.classList.add(ACTIVE_MENU_CLASS);
 
     parent.addEventListener('click', parentClickHandler);
+    openLinksForTab();
     window.scrollLock.disableScrolling();
   };
 
@@ -50,4 +60,5 @@ export const addBurgerHandlers = () => {
 
   button.addEventListener('click', buttonClickHandler);
   links.forEach((link) => link.addEventListener('click', linkClickHandler));
+  hideLinksForTab();
 };

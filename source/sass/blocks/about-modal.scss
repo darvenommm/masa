@@ -16,9 +16,19 @@
 
   color: $color-cerulean-blue;
 
+  transition: opacity $trans-default;
+
   padding: 2px;
   width: 22px;
   height: 22px;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
+  @include active {
+    opacity: 0.7;
+  }
 
   @include mobile {
     top: 20px;

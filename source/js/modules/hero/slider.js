@@ -8,7 +8,7 @@ const PAGINATION_BUTTONS_SELECTOR = '.hero__pagination-buttons';
 const PAGINATION_BUTTON_SELECTOR = '.hero__pagination-button';
 const PAGINATION_BUTTON_ACTIVE_CLASS = 'hero__pagination-button--active';
 
-const AUTOPLAY_SPEED = 3000; // it must be in ms
+const AUTOPLAY_SPEED = 3000; // this must be in ms
 
 const heroClasses = [
   'hero--first-picture',
