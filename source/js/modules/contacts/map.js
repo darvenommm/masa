@@ -26,6 +26,8 @@ export const createContactsMap = () => {
       dragging: false,
       touchZoom: false,
       keyboard: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
     });
 
     const marker = createMarker(CENTER, {

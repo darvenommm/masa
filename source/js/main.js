@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {initAccordions} from './modules/accordion/init-accordion';
+import {CustomSelect} from './modules/custom-select/custom-select';
 
 import {addBurgerHandlers} from './modules/header';
 import {initHeroSlider} from './modules/hero';
@@ -44,9 +45,13 @@ window.addEventListener('DOMContentLoaded', () => {
     // contacts
     createContactsMap();
 
-    // other
+    // custom select
+    new CustomSelect().init();
+
+    // modals
     initModals();
 
+    // forms
     const form = new Form();
     window.form = form;
     form.init();

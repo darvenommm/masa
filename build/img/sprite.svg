@@ -4,6 +4,8 @@
 <path d="M11 5.6875H1M1 5.6875L5.96689 11M1 5.6875L5.96689 1" stroke="currentColor"/>
 </g></symbol><symbol id="arrow-top-right" viewBox="0 0 10 10"><g fill="none">
 <path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="currentColor"/>
+</g></symbol><symbol id="check" viewBox="0 0 10 8"><g fill="none">
+<path d="M1 3.5L3.94737 7L9 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="close-menu" viewBox="0 0 18 18"><g fill="none">
 <path d="M1 17L9 9M9 9L17 1M9 9L17 17M9 9L1 1" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </g></symbol><symbol id="logo" viewBox="0 0 28 28"><g fill="none">
