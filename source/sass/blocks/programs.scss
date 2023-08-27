@@ -191,45 +191,7 @@
 }
 
 .programs__card-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: $color-white;
-
-  border-radius: 50%;
-  background-color: $color-cerulean-blue;
-  transition: background-color $trans-default, color $trans-default;
-
   flex-shrink: 0;
-  width: 30px;
-  height: 30px;
-  padding: 10px;
-
-  @include hover-focus {
-    color: $color-cerulean-blue;
-
-    background-color: $color-white;
-
-    svg {
-      transform: rotate(45deg);
-    }
-  }
-
-  @include active {
-    color: rgba($color-cerulean-blue, 0.7);
-
-    background-color: $color-white;
-
-    svg {
-      transform: rotate(45deg);
-    }
-  }
-
-  @include disabled {
-    background-color: $color-disabled-default;
-    cursor: not-allowed;
-  }
 }
 
 .programs__controls {

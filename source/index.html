@@ -36,7 +36,7 @@
               <nav class="header__navigation" id="header__menu">
                 <ul class="header__links">
                   <li class="header__link-item">
-                    <a class="header__link" href="#">О&nbsp;проекте</a>
+                    <a class="header__link" href="#about">О&nbsp;проекте</a>
                   </li>
                   <li class="header__link-item">
                     <button class="header__link" type="button">
@@ -61,10 +61,10 @@
                     </ul>
                   </li>
                   <li class="header__link-item">
-                    <a class="header__link" href="#">Как поехать</a>
+                    <a class="header__link" href="#roamap">Как поехать</a>
                   </li>
                   <li class="header__link-item">
-                    <a class="header__link" href="#">Отзывы</a>
+                    <a class="header__link" href="#reviews">Отзывы</a>
                   </li>
                   <li class="header__link-item">
                     <button class="header__link" type="button">
@@ -92,7 +92,7 @@
                     </ul>
                   </li>
                   <li class="header__link-item">
-                    <a class="header__link" href="#">Контакты</a>
+                    <a class="header__link" href="#contacts">Контакты</a>
                   </li>
                 </ul>
               </nav>
@@ -355,7 +355,7 @@
             </span>
           </span>
         </section>
-        <section class="about page__about">
+        <section class="about page__about" id="about">
           <div class="container">
             <div class="about__content">
               <div class="about__main-container">
@@ -422,7 +422,7 @@
             </ul>
           </div>
         </section>
-        <section class="programs page__programs">
+        <section class="programs page__programs" id="programs">
           <div class="container">
             <div class="programs__top">
               <h2 class="programs__title">Программы</h2>
@@ -444,7 +444,7 @@
                       Получите незаменимый опыт работы в&nbsp;крупнейших
                       израильских компаниях.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -485,7 +485,7 @@
                     <p class="programs__text">
                       Помогайте другим и&nbsp;развивайте свои лидерские качества.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -526,7 +526,7 @@
                     <p class="programs__text">
                       Получите образование и&nbsp;измените своё будущее.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -568,7 +568,7 @@
                       Получите незаменимый опыт работы в&nbsp;крупнейших
                       израильских компаниях.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -609,7 +609,7 @@
                     <p class="programs__text">
                       Помогайте другим и&nbsp;развивайте свои лидерские качества.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -650,7 +650,7 @@
                     <p class="programs__text">
                       Получите образование и&nbsp;измените своё будущее.
                     </p>
-                    <a class="programs__card-link" href="#">
+                    <a class="programs__card-link small-button" href="#">
                       <svg width="8" height="8" aria-hidden="true">
                         <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
                       </svg>
@@ -689,7 +689,6 @@
             </div>
             <div class="programs__controls">
               <div class="scrollbar programs__scrollbar" id="programs__scrollbar" aria-hidden="true">
-                <!-- for js  -->
                 <span></span>
               </div>
               <div class="programs__buttons">
@@ -717,7 +716,7 @@
             </a>
           </div>
         </section>
-        <section class="roadmap page__roadmap">
+        <section class="roadmap page__roadmap" id="roadmap">
           <div class="container">
             <div class="roadmap__content">
               <div class="roadmap__description-container">
@@ -803,6 +802,441 @@
                   </li>
                 </ol>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="news page__news" id="news">
+          <div class="container">
+            <h2 class="news__title">Новости и&nbsp;материалы</h2>
+            <ul class="news__buttons">
+              <li class="news__button-item">
+                <button class="news__button news__button--active" type="button">Общее</button>
+              </li>
+              <li class="news__button-item">
+                <button class="news__button" type="button" data-news-category="volunteer">Волонтёрство</button>
+              </li>
+              <li class="news__button-item">
+                <button class="news__button" type="button" data-news-category="internship">Стажировки</button>
+              </li>
+              <li class="news__button-item">
+                <button class="news__button" type="button" data-news-category="career">Карьера</button>
+              </li>
+              <li class="news__button-item">
+                <button class="news__button" type="button" data-news-category="traveling">Путешествия</button>
+              </li>
+            </ul>
+            <div class="news__slider swiper" id="news__slider">
+              <ul class="news__slides swiper-wrapper">
+                <li class="news__slide news__slide--first swiper-slide" data-news-category="internship">
+                  <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                  <p class="news__subtitle">
+                    Интервью с&nbsp;участницей программы стажировки
+                  </p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Саша рассказывает, как попала в&nbsp;программу
+                      и&nbsp;как прошла 6-месячная стажировка в&nbsp;ISOFound
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 767px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-mobile@2x.webp 2x, ./img/news/bg-first-mobile@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 767px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-mobile@2x.jpg 2x, ./img/news/bg-first-mobile@1x.jpg 1x"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-tablet@2x.webp 2x, ./img/news/bg-first-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-tablet@2x.jpg 2x, ./img/news/bg-first-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-desktop@2x.webp 2x, ./img/news/bg-first-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-first-desktop@2x.jpg 2x, ./img/news/bg-first-desktop@1x.jpg 1x"
+                      src="./img/news/bg-first-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide" data-news-category="traveling">
+                  <time class="news__date" datetime="2023-03-20">20/03/2023</time>
+                  <p class="news__subtitle">Путешествуем по&nbsp;Израилю</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Какие места посещают наши студенты весной
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 767px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-mobile@2x.webp 2x, ./img/news/bg-second-mobile@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 767px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-mobile@2x.jpg 2x, ./img/news/bg-second-mobile@1x.jpg 1x"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-tablet@2x.webp 2x, ./img/news/bg-second-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-tablet@2x.jpg 2x, ./img/news/bg-second-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-desktop@2x.webp 2x, ./img/news/bg-second-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-second-desktop@2x.jpg 2x, ./img/news/bg-second-desktop@1x.jpg 1x"
+                      src="./img/news/bg-second-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide" data-news-category="volunteer">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide" data-news-category="career">
+                  <time class="news__date" datetime="2023-03-10">10/03/2023</time>
+                  <p class="news__subtitle">Построй свою карьеру</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Ведущие компании готовы трудоустроить выпускников стажировки
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-fourth-tablet@2x.webp 2x, ./img/news/bg-fourth-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-fourth-tablet@2x.jpg 2x, ./img/news/bg-fourth-tablet@1x.jpg 1x"
+                      src="./img/news/bg-fourth-tablet@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+                <li class="news__slide swiper-slide">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <p class="news__subtitle">Новая программа волонтёрства</p>
+                  <div class="news__slide-bottom">
+                    <p class="news__text">
+                      Программа помощи детям длительностью 4&nbsp;месяца
+                    </p>
+                    <a class="news__link small-button" href="#">
+                      <svg width="8" height="8" aria-hidden="true">
+                        <use xlink:href="./img/sprite.svg#arrow-top-right"></use>
+                      </svg>
+                    </a>
+                  </div>
+                  <picture aria-hidden="true">
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.webp 2x, ./img/news/bg-third-tablet@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <source
+                      media="(max-width: 1439px)"
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-tablet@2x.jpg 2x, ./img/news/bg-third-tablet@1x.jpg 1x"
+                    >
+                    <source
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.webp 2x, ./img/news/bg-third-desktop@1x.webp 1x"
+                      type="image/webp"
+                    >
+                    <img
+                      width="0"
+                      height="0"
+                      srcset="./img/news/bg-third-desktop@2x.jpg 2x, ./img/news/bg-third-desktop@1x.jpg 1x"
+                      src="./img/news/bg-third-desktop@1x.jpg"
+                      alt=""
+                    >
+                  </picture>
+                </li>
+              </ul>
+            </div>
+            <div class="news__bottom">
+              <button class="control-button" id="news__slider-prev" type="button">
+                <span class="visually-hidden">Нажми, чтобы перейти на предыдущую новость.</span>
+                <svg width="10" height="10" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
+              <div class="news__pagination" id="news__slider-pagination"></div>
+              <button class="control-button control-button--right" id="news__slider-next" type="button">
+                <span class="visually-hidden">Нажми, чтобы на следующую новость.</span>
+                <svg width="10" height="10" aria-hidden="true">
+                  <use xlink:href="./img/sprite.svg#arrow-left"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -941,7 +1375,7 @@
             </ul>
           </div>
         </section>
-        <section class="reviews page__reviews">
+        <section class="reviews page__reviews" id="reviews">
           <div class="container">
             <h2 class="reviews__title">Отзывы</h2>
             <div class="reviews__slider swiper" id="reviews__slider">
@@ -1189,7 +1623,7 @@
             </div>
           </div>
         </section>
-        <section class="contacts page__contacts">
+        <section class="contacts page__contacts" id="contacts">
           <div class="container">
             <div class="contacts__top">
               <h2 class="contacts__title">Контакты</h2>
@@ -1312,9 +1746,24 @@
                         required
                       >
                     </div>
-                    <div class="text-input text-input--light">
+                    <div
+                      class="text-input text-input--light"
+                      data-validate-type="text"
+                      data-limitation="leters"
+                      data-message-base="Поле обязательно к заполнению!"
+                      data-message-extra="Проверьте корректность заполнения поля"
+                      data-required="data-required"
+                    >
                       <label for="form__message">Ваше сообщение</label>
-                      <textarea id="form__message" name="message" cols="30" rows="10" autocapitalize="on"></textarea>
+                      <textarea
+                        id="form__message"
+                        name="message"
+                        cols="30"
+                        rows="10"
+                        autocapitalize="on"
+                        minlength="10"
+                        required
+                      ></textarea>
                     </div>
                     <div class="custom-select custom-select--light" data-select="data-select" data-validate-type="select" data-name="city" data-required="true">
                       <p class="custom-select__title">Выберите город</p>
@@ -1406,22 +1855,22 @@
             </a>
             <ul class="footer__links">
               <li class="footer__link-item">
-                <a class="footer__link" href="#">О&nbsp;проекта</a>
+                <a class="footer__link" href="#about">О&nbsp;проекта</a>
               </li>
               <li class="footer__link-item">
-                <a class="footer__link" href="#">Программы</a>
+                <a class="footer__link" href="#programs">Программы</a>
               </li>
               <li class="footer__link-item">
-                <a class="footer__link" href="#">Как поехать</a>
+                <a class="footer__link" href="#roamap">Как поехать</a>
               </li>
               <li class="footer__link-item">
-                <a class="footer__link" href="#">Отзывы</a>
+                <a class="footer__link" href="#reviews">Отзывы</a>
               </li>
               <li class="footer__link-item">
-                <a class="footer__link" href="#">Новости</a>
+                <a class="footer__link" href="#news">Новости</a>
               </li>
               <li class="footer__link-item">
-                <a class="footer__link" href="#">Контакты</a>
+                <a class="footer__link" href="#contacts">Контакты</a>
               </li>
             </ul>
             <ul class="footer__socials">

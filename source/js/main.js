@@ -8,6 +8,7 @@ import {CustomSelect} from './modules/custom-select/custom-select';
 import {addBurgerHandlers} from './modules/header';
 import {initHeroSlider} from './modules/hero';
 import {initProgramsSlider} from './modules/programs';
+import {initNewsSlider, addNewsButtonsHandlers} from './modules/news';
 import {addQuestionsHandlers} from './modules/questions';
 import {initReviewsSlider} from './modules/reviews';
 import {createContactsMap} from './modules/contacts';
@@ -34,6 +35,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // programs
     initProgramsSlider();
+
+    // news
+    addNewsButtonsHandlers();
+    initNewsSlider();
 
     // questions
     addQuestionsHandlers();

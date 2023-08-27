@@ -3,6 +3,7 @@ import Swiper from '../../vendor/swiper';
 import {isMobile} from 'is-mobile';
 
 import {SwiperScrollbar} from '../../utils/swiper/scrollbar';
+import {settings} from '../../settings';
 
 const SLIDER_SELECTOR = '#reviews__slider';
 const PREV_BUTTON_SELECTOR = '#reviews__slider-prev';
@@ -24,11 +25,11 @@ export const initReviewsSlider = () => {
         spaceBetween: 20,
         slidesPerView: 1,
       },
-      768: {
+      [settings.tabletBreakpoint]: {
         spaceBetween: 30,
         slidesPerView: 1.2,
       },
-      1440: {
+      [settings.desktopBreakpoint]: {
         spaceBetween: 32,
         slidesPerView: 2,
       },

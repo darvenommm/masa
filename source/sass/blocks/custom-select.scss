@@ -7,6 +7,7 @@
     margin-bottom: 25px;
 
     .custom-select__button {
+      border-color: $color-error;
       background-color: rgba($color-error, 0.2);
     }
 
@@ -70,6 +71,8 @@
 
 .custom-select__error {
   bottom: -30px;
+
+  color: $color-error;
 }
 
 .custom-select--light {

@@ -38,6 +38,18 @@
   }
 }
 
+.page__news {
+  padding-top: 120px;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding-top: 67px;
+  }
+}
+
 .page__roadmap {
   padding: 120px 0;
 
