@@ -55,6 +55,8 @@
   font-size: 16px;
   font-weight: 400;
 
+  transition: color $trans-default;
+
   padding: 20px 0;
 
   @include hover-focus {
@@ -180,7 +182,7 @@
 
   color: $color-text-default;
 
-  transition: background-color $trans-default;
+  transition: color $trans-default, background-color $trans-default;
 
   font-size: 14px;
   line-height: 128.57%;

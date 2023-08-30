@@ -3431,6 +3431,17 @@ input {
   padding: 0;
   margin: 0;
 }
+.header__link svg {
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+.header__link--active svg {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
 .header__link:hover:not(:disabled) {
   color: #ffffff;
 }
@@ -3447,11 +3458,16 @@ input {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 16px;
+  overflow: hidden;
   list-style: none;
+  height: 0;
   padding: 0;
+  margin: 0;
+}
+.header__inner-links--opened {
+  height: auto;
   padding-top: 20px;
   padding-left: 16px;
-  margin: 0;
 }
 
 .hero {
@@ -5761,6 +5777,8 @@ input {
 .footer__link {
   font-size: 16px;
   font-weight: 400;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
   padding: 20px 0;
 }
 .footer__link:hover:not(:disabled) {
@@ -5910,8 +5928,8 @@ input {
 .footer__policy-link {
   position: relative;
   color: #484848;
-  -webkit-transition: background-color 300ms;
-  transition: background-color 300ms;
+  -webkit-transition: color 300ms, background-color 300ms;
+  transition: color 300ms, background-color 300ms;
   font-size: 14px;
   line-height: 128.57%;
 }

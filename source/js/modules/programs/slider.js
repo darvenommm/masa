@@ -9,6 +9,10 @@ const PREV_BUTTON_SELECTOR = '#programs__slider-prev';
 const NEXT_BUTTON_SELECTOR = '#programs__slider-next';
 const SCROLLBAR_SELECTOR = '#programs__scrollbar > span';
 
+let swiperLink = null;
+const saveProgramsSlider = (slider) => void (swiperLink = slider);
+export const getProgramsSlider = () => swiperLink;
+
 export const initProgramsSlider = () => {
   const scrollbar = new SwiperScrollbar(SCROLLBAR_SELECTOR);
 
@@ -45,5 +49,5 @@ export const initProgramsSlider = () => {
     },
   });
 
-  return slider;
+  saveProgramsSlider(slider);
 };
