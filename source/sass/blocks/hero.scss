@@ -84,6 +84,7 @@
 
   width: 94px;
   padding: 14px 20px;
+  padding-top: 0;
   margin: 0;
 
   & > li:first-child::before {
@@ -147,7 +148,7 @@
 
   max-width: 78.23%;
   margin: 0;
-  padding: 40px 50px 30px;
+  padding: 40px 50px 29px;
 
   @include tablet {
     font-size: 36px;
@@ -171,14 +172,15 @@
 
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   gap: 30px;
 
   background-color: $color-white;
   border-radius: 0 0 30px 30px;
 
   max-width: 62.58%;
-  padding: 0 50px 35px;
+  padding: 0 50px 29px;
+  margin-top: -7px;
 
   &::before {
     position: absolute;
@@ -214,10 +216,13 @@
 }
 
 .hero__description {
+  width: 460px;
   margin: 0;
 
   @include tablet {
     line-height: 125%;
+
+    width: auto;
   }
 
   @include mobile {
@@ -284,4 +289,9 @@
     width: 100vw;
     height: auto;
   }
+}
+
+.hero__link {
+  gap: 33px;
+  padding-left: 29px;
 }

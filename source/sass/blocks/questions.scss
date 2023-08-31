@@ -13,7 +13,7 @@ $questions__animation-time: 200ms;
 
   padding: 11px 10px 13px 9px;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 54px;
 
   @include tablet {
     font-size: 34px;
@@ -57,13 +57,25 @@ $questions__animation-time: 200ms;
   border: 1px solid $color-cerulean-blue;
   padding: 40px;
 
+  &:nth-child(1n + 4) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    .questions__button {
+      position: relative;
+      top: 5px;
+    }
+  }
+
   &.is-active {
     color: $color-white;
 
     background-color: $color-cerulean-blue;
 
+    padding-bottom: 30px;
+
     .questions__top {
-      margin-bottom: 30px;
+      margin-bottom: 12px;
     }
 
     .questions__subtitle {

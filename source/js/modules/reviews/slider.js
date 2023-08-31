@@ -18,7 +18,6 @@ export const initReviewsSlider = () => {
       tablet: true,
       featureDetect: true,
     }),
-    autoHeight: true,
 
     breakpoints: {
       0: {

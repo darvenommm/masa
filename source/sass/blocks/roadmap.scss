@@ -9,7 +9,7 @@
 .roadmap__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 138px;
+  gap: 30px;
 
   @include tablet {
     grid-template-columns: none;
@@ -18,6 +18,8 @@
 }
 
 .roadmap__description-container {
+  width: 498px;
+
   @include tablet {
     margin-bottom: 50px;
   }
@@ -28,11 +30,12 @@
 }
 
 .roadmap__title {
+  font-weight: 400;
   font-size: 50px;
   line-height: 100%;
 
   margin: 0;
-  margin-bottom: 42px;
+  margin-bottom: 29px;
 
   @include tablet {
     font-size: 34px;
@@ -50,7 +53,7 @@
 }
 
 .roadmap__texts {
-  margin-bottom: 40px;
+  margin-bottom: 32px;
 
   p {
     margin: 0;
@@ -168,7 +171,7 @@
 
   border-radius: 16px;
 
-  padding: 30px 25px;
+  padding: 22px 25px;
   border: 1px solid $color-white;
 
   &::before {
@@ -177,8 +180,8 @@
     counter-increment: roadmap__steps;
 
     position: absolute;
-    left: -(math.div($size, 2));
-    top: -(math.div($size, 2));
+    left: -20px;
+    top: -16px;
 
     display: flex;
     justify-content: center;
@@ -217,6 +220,7 @@
 
 .roadmap__step-text {
   margin: 0;
+  width: 380px;
 
   @include tablet {
     line-height: 125%;

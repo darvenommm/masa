@@ -15,7 +15,7 @@
 }
 
 .page__about {
-  padding: 131px 0 132px;
+  padding: 118px 0 120px;
 
   @include tablet {
     padding: 100px 0;
@@ -38,20 +38,9 @@
   }
 }
 
-.page__news {
-  padding-top: 120px;
-
-  @include tablet {
-    padding-top: 100px;
-  }
-
-  @include mobile {
-    padding-top: 67px;
-  }
-}
-
 .page__roadmap {
-  padding: 120px 0;
+  padding: 124px 0;
+  padding-bottom: 107px;
 
   @include tablet {
     padding: 100px 0;
@@ -62,8 +51,20 @@
   }
 }
 
+.page__news {
+  padding-top: 125px;
+
+  @include tablet {
+    padding-top: 100px;
+  }
+
+  @include mobile {
+    padding-top: 67px;
+  }
+}
+
 .page__questions {
-  padding: 120px 0;
+  padding: 112px 0 127px;
 
   @include tablet {
     padding: 100px 0;

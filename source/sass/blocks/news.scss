@@ -10,7 +10,7 @@
   text-align: center;
 
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 43px;
 
   @include tablet {
     font-size: 34px;
@@ -39,7 +39,7 @@
 
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 37px;
 
   @include tablet {
     gap: 10px;
@@ -88,7 +88,7 @@
 }
 
 .news__slider {
-  margin-bottom: 40px;
+  margin-bottom: 17px;
 
   @include tablet {
     margin-bottom: 30px;
@@ -117,7 +117,7 @@
   border-radius: 12px;
 
   width: calc((100% - 32px * 3) / 4);
-  padding-top: 249px;
+  padding-top: 259px;
 
   picture {
     position: absolute;
@@ -164,7 +164,7 @@
   border-radius: 0 12px 0 0;
   background-color: $color-background-default;
 
-  padding: 12px 12px 6px 0;
+  padding: 12px 12px 3px 0;
 
   &::before,
   &::after {
@@ -201,7 +201,7 @@
   background-color: $color-background-default;
 
   width: 221px;
-  padding: 18px 18px 6px 0;
+  padding: 6px 18px 1px 0;
   margin: 0;
 
   &::before {
@@ -246,7 +246,7 @@
   background-color: $color-background-default;
 
   width: 240px;
-  padding: 12px 18px 15px 0;
+  padding: 9px 18px 15px 0;
 
   &::before {
     position: absolute;
@@ -353,9 +353,11 @@
 }
 
 .news__slide--first {
-  width: calc((100% - 32px * 2) / 2);
+  padding-top: 249px;
+  width: calc((100% - 32px * 3) / 2 + 32px);
 
   .news__subtitle {
+    padding-top: 13px;
     width: 291px;
   }
 

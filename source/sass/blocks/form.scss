@@ -38,7 +38,7 @@
   background-color: $color-cerulean-blue;
   border-radius: 16px;
 
-  padding: 70px 74px;
+  padding: 85px 74px 47px;
   width: 498px;
 
   @include tablet {
@@ -77,7 +77,7 @@
 
 .form__text {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @include tablet {
     line-height: 125%;
@@ -96,7 +96,7 @@
 .form__inner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
 
   margin-bottom: 40px;
 

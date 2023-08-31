@@ -3,7 +3,7 @@
 .about__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 159px;
+  gap: 31px;
 
   margin-bottom: 60px;
 
@@ -18,6 +18,14 @@
   }
 }
 
+.about__main-container {
+  width: 540px;
+
+  @include tablet {
+    width: auto;
+  }
+}
+
 .about__main-title {
   color: $color-cerulean-blue;
   font-size: 50px;
@@ -25,7 +33,7 @@
   line-height: 100%;
 
   margin: 0;
-  margin-bottom: 43px;
+  margin-bottom: 29px;
 
   @include tablet {
     font-size: 34px;
@@ -73,6 +81,14 @@
   }
 }
 
+.about__description-container {
+  width: 500px;
+
+  @include tablet {
+    width: auto;
+  }
+}
+
 .about__description-title {
   color: $color-cerulean-blue;
   font-size: 32px;
@@ -80,7 +96,7 @@
   line-height: 112.5%;
 
   margin: 0;
-  margin-bottom: 46px;
+  margin-bottom: 33px;
 
   @include tablet {
     font-size: 28px;
@@ -98,7 +114,7 @@
 }
 
 .about__description-texts {
-  margin-bottom: 40px;
+  margin-bottom: 31px;
 
   p {
     margin: 0;
@@ -129,17 +145,22 @@
   }
 }
 
+.about__button {
+  gap: 31px;
+  padding-left: 30px;
+}
+
 .about__points {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 54px 52px;
+  gap: 54px 50px;
 
   list-style: none;
   border-radius: 20px;
   background-color: $color-cerulean-blue;
 
   margin: 0;
-  padding: 70px 106px;
+  padding: 91px 106px 54px 127px;
 
   @include tablet {
     padding: 40px;
@@ -159,7 +180,6 @@
 
   display: flex;
   justify-content: space-between;
-  gap: 10px;
 
   border-radius: 16px;
 
@@ -232,4 +252,20 @@
 
   max-width: 190px;
   margin: 0;
+
+  &--first {
+    width: 178px;
+  }
+
+  &--second {
+    width: 167px;
+  }
+
+  &--third {
+    width: 190px;
+  }
+
+  &--fourth {
+    width: 164px;
+  }
 }

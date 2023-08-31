@@ -17,7 +17,6 @@ export const initProgramsSlider = () => {
   const scrollbar = new SwiperScrollbar(SCROLLBAR_SELECTOR);
 
   const slider = new Slider(SLIDER_SELECTOR, {
-    autoHeight: true,
     allowTouchMove: isMobile({
       tablet: true,
       featureDetect: true,

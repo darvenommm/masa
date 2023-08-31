@@ -48,7 +48,7 @@ const changePaginationButtons = (swiper, index) => {
 
       button.addEventListener('click', () => {
         swiper.slideTo(buttonIndex + 1);
-        scheduleChangingToNextSlide(swiper);
+        // scheduleChangingToNextSlide(swiper);
       });
     });
   });
@@ -69,7 +69,7 @@ const sliderChangeHandler = (swiper) => {
 
   changePaginationButtons(swiper, currentSlideIndex);
 
-  scheduleChangingToNextSlide(swiper);
+  // scheduleChangingToNextSlide(swiper);
 };
 
 export const initHeroSlider = () => {
