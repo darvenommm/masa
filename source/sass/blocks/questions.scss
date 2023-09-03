@@ -19,7 +19,7 @@ $questions__animation-time: 200ms;
     font-size: 34px;
     line-height: 147.06%;
 
-    margin-bottom: 40px;
+    margin-bottom: 25px;
   }
 
   @include mobile {
@@ -174,8 +174,13 @@ $questions__animation-time: 200ms;
 
     &.is-active {
       .questions__top {
-        margin-bottom: 20px;
+        margin-bottom: 14px;
       }
+    }
+
+    &:nth-child(1n + 4) {
+      padding-top: 20px;
+      padding-bottom: 25px;
     }
   }
 
@@ -273,6 +278,8 @@ $questions__animation-time: 200ms;
 
     p {
       line-height: 20px;
+
+      width: 560px;
     }
   }
 
@@ -280,6 +287,8 @@ $questions__animation-time: 200ms;
     p {
       font-size: 14px;
       line-height: 142.86%;
+
+      width: auto;
     }
   }
 }

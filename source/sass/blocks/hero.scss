@@ -154,7 +154,7 @@
     font-size: 36px;
     line-height: 122.22%;
 
-    max-width: 98.65%;
+    max-width: 97.25%;
     padding: 30px 40px 24px;
   }
 
@@ -196,7 +196,7 @@
   }
 
   @include tablet {
-    max-width: 88.47%;
+    max-width: 87.17%;
     padding: 0 40px 35px;
   }
 
@@ -253,6 +253,11 @@
 }
 
 .hero__button-container {
+  @include tablet {
+    margin-right: -3px;
+    margin-top: -16px;
+  }
+
   @include mobile {
     position: relative;
 

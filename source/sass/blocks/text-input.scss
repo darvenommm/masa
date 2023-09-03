@@ -80,6 +80,12 @@
     label {
       line-height: 142.86%;
     }
+
+    input,
+    textarea {
+      padding-top: 13px;
+      padding-bottom: 13px;
+    }
   }
 
   @include mobile {

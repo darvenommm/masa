@@ -109,7 +109,7 @@
   }
 
   @include tablet {
-    padding: 285px 41px 20px 20px;
+    padding: 285px 41px 16px 20px;
   }
 
   @include mobile {
@@ -152,6 +152,8 @@
   @include tablet {
     font-size: 20px;
     line-height: 120%;
+
+    min-width: 173px;
   }
 
   @include mobile {
@@ -175,7 +177,7 @@
   min-height: 79px;
 
   @include tablet {
-    min-height: 86px;
+    padding-bottom: 0;
   }
 }
 
@@ -186,10 +188,15 @@
   margin: 0;
 
   @include tablet {
+    position: relative;
+    top: -5px;
+
     line-height: 142.86%;
   }
 
   @include mobile {
+    top: 0;
+
     font-size: 12px;
     line-height: 116.67%;
   }
@@ -197,6 +204,15 @@
 
 .programs__card-link {
   flex-shrink: 0;
+
+  @include tablet {
+    position: relative;
+    top: -9px;
+  }
+
+  @include mobile {
+    top: 0;
+  }
 }
 
 .programs__controls {

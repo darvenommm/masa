@@ -38,6 +38,8 @@
   @include tablet {
     font-size: 34px;
     line-height: 147.06%;
+
+    margin-bottom: 23px;
   }
 
   @include mobile {
@@ -63,7 +65,7 @@
 
   @include tablet {
     max-width: 64.97%;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
 
     p {
       font-size: 20px;
@@ -102,7 +104,7 @@
     font-size: 28px;
     line-height: 100%;
 
-    margin-bottom: 30px;
+    margin-bottom: 23px;
   }
 
   @include mobile {
@@ -127,7 +129,7 @@
 
   @include tablet {
     max-width: 74.85%;
-    margin-bottom: 40px;
+    margin-bottom: 35px;
 
     p {
       line-height: 125%;
@@ -163,7 +165,9 @@
   padding: 91px 106px 54px 127px;
 
   @include tablet {
-    padding: 40px;
+    gap: 41px 50px;
+
+    padding: 62px 40px 42px 60px;
   }
 
   @include mobile {
@@ -206,9 +210,11 @@
 
   @include tablet {
     flex-direction: column;
+    justify-content: start;
     gap: 12px;
 
     padding: 30px;
+    padding-bottom: 20px;
   }
 
   @include mobile {
@@ -267,5 +273,14 @@
 
   &--fourth {
     width: 164px;
+  }
+
+  @include tablet {
+    position: relative;
+    top: -5px;
+  }
+
+  @include mobile {
+    top: 0;
   }
 }

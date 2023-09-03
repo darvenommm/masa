@@ -55,6 +55,64 @@ const sliderResizeHandler = (swiper) => {
   }
 };
 
+const addSliderHandlersForRightOrder = (slider) => {
+  const width = window.innerWidth;
+  if (!(settings.tabletBreakpoint <= width) || !(width < settings.desktopBreakpoint)) {
+    return;
+  }
+
+  const parent = slider.el;
+  const length = slider.slides.length;
+  const firstIndexOfElementsInSecondOrder = Math.ceil(length / 2) + 1;
+
+  const config = {
+    attributes: true,
+    subtree: true,
+  };
+
+  const changeItemsOrder = () => {
+    const elements = parent.querySelectorAll('li');
+
+    elements.forEach((element, index) => {
+      switch (index) {
+        case 0:
+          element.style.order = '-2';
+          break;
+        case 1:
+          element.style.order = firstIndexOfElementsInSecondOrder.toString();
+          element.style.marginTop = '30px';
+          break;
+        case 2:
+          element.style.order = (firstIndexOfElementsInSecondOrder + 1).toString();
+          break;
+        case 3:
+          element.style.order = '-1';
+          element.style.marginTop = '0';
+          break;
+      }
+    });
+  };
+
+  const callback = (mutations) => {
+    let hasAttributesMutations = false;
+    for (let mutation of mutations) {
+      if (mutation.type === 'attributes') {
+        hasAttributesMutations = true;
+        break;
+      }
+    }
+
+    if (hasAttributesMutations) {
+      changeItemsOrder();
+      hasAttributesMutations = false;
+    }
+  };
+
+  const observer = new MutationObserver(callback);
+  observer.observe(parent, config);
+  changeItemsOrder();
+};
+
 const options = {
   allowTouchMove: isMobile({
     tablet: true,
@@ -108,5 +166,8 @@ const options = {
 };
 
 export const initNewsSlider = () => {
-  return new Swiper(SLIDER_SELECTOR, options);
+  const slider = new Swiper(SLIDER_SELECTOR, options);
+  addSliderHandlersForRightOrder(slider);
+
+  return slider;
 };
