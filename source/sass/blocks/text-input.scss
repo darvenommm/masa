@@ -32,6 +32,13 @@
     }
   }
 
+  @include mobile {
+    label {
+      font-size: 12px;
+      line-height: 116.67%;
+    }
+  }
+
   textarea {
     resize: none;
 

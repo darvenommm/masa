@@ -26,6 +26,11 @@
 
   margin: 0;
   margin-bottom: 12px;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 116.67%;
+  }
 }
 
 .custom-select__text {

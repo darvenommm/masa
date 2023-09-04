@@ -56,14 +56,60 @@ const sliderResizeHandler = (swiper) => {
 };
 
 const addSliderHandlersForRightOrder = (slider) => {
-  const width = window.innerWidth;
-  if (!(settings.tabletBreakpoint <= width) || !(width < settings.desktopBreakpoint)) {
-    return;
-  }
-
   const parent = slider.el;
   const length = slider.slides.length;
   const firstIndexOfElementsInSecondOrder = Math.ceil(length / 2) + 1;
+
+  const changeItemsOrderForTablet = () => {
+    const elements = parent.querySelectorAll('li');
+
+    elements.forEach((element, index) => {
+      switch (index) {
+        case 0:
+          element.style.order = '0';
+          break;
+        case 1:
+          element.style.order = firstIndexOfElementsInSecondOrder.toString();
+          break;
+        case 2:
+          element.style.order = (firstIndexOfElementsInSecondOrder + 1).toString();
+          break;
+        case 3:
+          element.style.order = '1';
+          break;
+      }
+
+      if (Number(element.style.order) < firstIndexOfElementsInSecondOrder) {
+        element.style.marginTop = '0';
+      } else {
+        element.style.marginTop = '30px';
+      }
+    });
+  };
+
+  const changeItemsOrderForMobile = () => {
+    const elements = parent.querySelectorAll('li');
+
+    elements.forEach((element, index) => {
+      if (index % 2 === 0) {
+        element.style.order = (0 + Math.floor(index / 2)).toString();
+        element.style.marginTop = '0';
+      } else {
+        element.style.order =
+          (firstIndexOfElementsInSecondOrder + Math.floor(index / 2)).toString();
+        element.style.marginTop = '20px';
+      }
+    });
+  };
+
+  const changeItemsOrderForDesktop = () => {
+    const elements = parent.querySelectorAll('li');
+
+    elements.forEach((element, index) => {
+      element.style.order = index.toString();
+      element.style.marginTop = '0';
+    });
+  };
 
   const config = {
     attributes: true,
@@ -71,26 +117,14 @@ const addSliderHandlersForRightOrder = (slider) => {
   };
 
   const changeItemsOrder = () => {
-    const elements = parent.querySelectorAll('li');
-
-    elements.forEach((element, index) => {
-      switch (index) {
-        case 0:
-          element.style.order = '-2';
-          break;
-        case 1:
-          element.style.order = firstIndexOfElementsInSecondOrder.toString();
-          element.style.marginTop = '30px';
-          break;
-        case 2:
-          element.style.order = (firstIndexOfElementsInSecondOrder + 1).toString();
-          break;
-        case 3:
-          element.style.order = '-1';
-          element.style.marginTop = '0';
-          break;
-      }
-    });
+    const width = window.innerWidth;
+    if (settings.tabletBreakpoint <= width && width < settings.desktopBreakpoint) {
+      changeItemsOrderForTablet();
+    } else if (width < settings.tabletBreakpoint) {
+      changeItemsOrderForMobile();
+    } else {
+      changeItemsOrderForDesktop();
+    }
   };
 
   const callback = (mutations) => {
@@ -102,10 +136,11 @@ const addSliderHandlersForRightOrder = (slider) => {
       }
     }
 
-    if (hasAttributesMutations) {
-      changeItemsOrder();
-      hasAttributesMutations = false;
+    if (!hasAttributesMutations) {
+      return;
     }
+
+    changeItemsOrder();
   };
 
   const observer = new MutationObserver(callback);

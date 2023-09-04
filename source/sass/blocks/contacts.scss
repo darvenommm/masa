@@ -4,6 +4,11 @@
   background-color: $color-cerulean-blue;
 }
 
+.contacts__container {
+  position: relative;
+  left: 1px;
+}
+
 .contacts__top {
   display: flex;
   justify-content: space-between;
@@ -21,6 +26,12 @@
 
     padding-bottom: 30px;
     margin-bottom: 30px;
+  }
+
+  @include mobile {
+    gap: 30px;
+
+    padding-bottom: 16px;
   }
 }
 
@@ -40,6 +51,8 @@
   }
 
   @include mobile {
+    top: 0;
+
     font-size: 20px;
     line-height: 100%;
   }
@@ -58,7 +71,7 @@
 
   @include mobile {
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 }
 
@@ -81,7 +94,7 @@
   margin-bottom: 15px;
 
   @include mobile {
-    margin-bottom: 15px;
+    margin-bottom: 9px;
   }
 }
 

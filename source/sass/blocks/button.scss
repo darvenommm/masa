@@ -113,6 +113,11 @@
   transition: color $trans-default;
 
   flex-grow: 1;
+
+  @include mobile {
+    font-size: 12px;
+    letter-spacing: 0.24px;
+  }
 }
 
 .button__icon {
@@ -129,4 +134,9 @@
   flex-shrink: 0;
   width: 46px;
   height: 46px;
+
+  @include mobile {
+    width: 34px;
+    height: 34px;
+  }
 }

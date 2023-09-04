@@ -18,7 +18,7 @@
   }
 
   @include mobile {
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 }
 
@@ -109,11 +109,11 @@
   }
 
   @include tablet {
-    padding: 285px 41px 16px 20px;
+    padding: 285px 41px 21px 20px;
   }
 
   @include mobile {
-    padding: 271px 10px 15px;
+    padding: 271px 10px 17px;
   }
 }
 
@@ -162,6 +162,7 @@
 
     padding: 18px;
     padding-bottom: 6px;
+    min-width: 145px;
   }
 }
 
@@ -177,7 +178,13 @@
   min-height: 79px;
 
   @include tablet {
-    padding-bottom: 0;
+    padding-bottom: 5px;
+    min-height: auto;
+  }
+
+  @include mobile {
+    padding-bottom: 15px;
+    padding-top: 13px;
   }
 }
 
@@ -207,7 +214,7 @@
 
   @include tablet {
     position: relative;
-    top: -9px;
+    top: -4px;
   }
 
   @include mobile {

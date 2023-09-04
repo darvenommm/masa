@@ -101,7 +101,10 @@
   }
 
   @include mobile {
-    padding: 10px 16px;
+    gap: 10px;
+
+    padding: 0 16px;
+    width: 84px;
 
     & > li:first-child::before {
       background-image: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10C4.47715 10 0 5.52285 0 0V10H10Z' fill='white'/%3E%3C/svg%3E");
@@ -132,6 +135,9 @@
   }
 
   @include mobile {
+    position: relative;
+    top: -4px;
+
     width: 8px;
     height: 8px;
   }
@@ -163,7 +169,7 @@
     line-height: 118.18%;
 
     max-width: none;
-    padding: 20px 14px 16px;
+    padding: 21px 14px 19px;
   }
 }
 
@@ -202,6 +208,7 @@
 
   @include mobile {
     flex-direction: column;
+    align-items: start;
     gap: 0;
 
     background-color: $transparent;
@@ -235,7 +242,7 @@
     border-radius: 0 0 14px 0;
 
     max-width: 90%;
-    padding: 0 14px 15px;
+    padding: 0 14px 11px;
 
     &::before {
       position: absolute;
@@ -264,7 +271,7 @@
     background-color: $color-white;
     border-radius: 0 0 14px 14px;
 
-    padding: 10px 15px;
+    padding: 25px 12px 10px 15px;
 
     &::before {
       position: absolute;
@@ -299,4 +306,10 @@
 .hero__link {
   gap: 33px;
   padding-left: 29px;
+
+  @include mobile {
+    gap: 21px;
+
+    padding-left: 20px;
+  }
 }

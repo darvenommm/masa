@@ -48,6 +48,10 @@
 
     margin-bottom: 21px;
   }
+
+  @include mobile {
+    margin-bottom: 14px;
+  }
 }
 
 .about__main-texts {
@@ -75,6 +79,8 @@
 
   @include mobile {
     max-width: none;
+    margin-bottom: 31px;
+    width: 90%;
 
     p {
       font-size: 16px;
@@ -111,7 +117,7 @@
     font-size: 18px;
     line-height: 122.22%;
 
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 }
 
@@ -138,7 +144,7 @@
 
   @include mobile {
     max-width: none;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
     p {
       font-size: 14px;
@@ -150,6 +156,11 @@
 .about__button {
   gap: 31px;
   padding-left: 30px;
+
+  @include mobile {
+    gap: 20px;
+    padding-left: 20px;
+  }
 }
 
 .about__points {
@@ -218,9 +229,11 @@
   }
 
   @include mobile {
-    gap: 8px;
+    gap: 2px;
 
     padding: 24px 20px;
+    padding-left: 16px;
+    padding-top: 21px;
   }
 }
 
@@ -241,6 +254,9 @@
   }
 
   @include mobile {
+    position: relative;
+    left: 4px;
+
     font-size: 16px;
     line-height: 125%;
     letter-spacing: 0.16px;
@@ -275,12 +291,28 @@
     width: 164px;
   }
 
+  br {
+    display: none;
+  }
+
   @include tablet {
     position: relative;
     top: -5px;
+
+    line-height: 125%;
   }
 
   @include mobile {
+    left: 4px;
     top: 0;
+
+    font-size: 14px;
+    line-height: 142.86%;
+
+    width: 84%;
+
+    br {
+      display: block;
+    }
   }
 }

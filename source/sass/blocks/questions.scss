@@ -26,7 +26,7 @@ $questions__animation-time: 200ms;
     font-size: 20px;
     line-height: 100%;
 
-    margin-bottom: 36px;
+    margin-bottom: 19px;
   }
 }
 
@@ -188,9 +188,16 @@ $questions__animation-time: 200ms;
     padding: 20px 15px;
 
     &.is-active {
+      padding-bottom: 15px;
+
       .questions__top {
-        margin-bottom: 22px;
+        margin-bottom: 12px;
       }
+    }
+
+    &:nth-child(1n + 4) {
+      padding-top: 19px;
+      padding-bottom: 20px;
     }
   }
 }
