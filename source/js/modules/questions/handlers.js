@@ -5,7 +5,7 @@ const ACTIVE_ELEMENTS_SELECTOR = '.questions__subtitle, .questions__button';
 
 export const addQuestionsHandlers = () => {
   const parent = document.querySelector(PARENT_SELECTOR);
-  const elements = parent.querySelectorAll(ELEMENT_SELECTOR);
+  const elements = (parent ? parent : document).querySelectorAll(ELEMENT_SELECTOR);
 
   elements.forEach((element) => {
     const activeElements = element.querySelectorAll(ACTIVE_ELEMENTS_SELECTOR);

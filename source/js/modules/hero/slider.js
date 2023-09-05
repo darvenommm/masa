@@ -56,11 +56,6 @@ const changePaginationButtons = (swiper, index) => {
 
 const sliderChangeHandler = (swiper) => {
   const parent = document.querySelector(PARENT_SELECTOR);
-
-  if (!parent) {
-    return;
-  }
-
   const currentSlideIndex = swiper.realIndex;
   const currentClass = heroClasses[currentSlideIndex];
 

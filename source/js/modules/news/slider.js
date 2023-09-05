@@ -60,6 +60,10 @@ const addSliderHandlersForRightOrder = (slider) => {
   const length = slider.slides.length;
   const firstIndexOfElementsInSecondOrder = Math.ceil(length / 2) + 1;
 
+  if (!(parent instanceof Node)) {
+    return;
+  }
+
   const changeItemsOrderForTablet = () => {
     const elements = parent.querySelectorAll('li');
 
