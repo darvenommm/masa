@@ -80,6 +80,10 @@
     border: 1px solid $color-cerulean-blue;
   }
 
+  @include hover-focus {
+    color: $color-cerulean-blue;
+  }
+
   @include tablet {
     padding: 14px 20px;
   }
@@ -339,17 +343,38 @@
   line-height: 125%;
 
   background-color: $transparent;
-  transition: color $trans-default, background-color $trans-default;
   border-radius: 50%;
+  transition:
+    color $trans-default,
+    background-color $trans-default,
+    border-color $trans-default;
 
-  border: none;
+  border: 1px solid $transparent;
   width: 32px;
   height: 32px;
+
+  @include hover-focus {
+    color: $color-cerulean-blue;
+
+    border-color: $color-cerulean-blue;
+  }
+
+  @include active {
+    color: $color-white;
+
+    background-color: $color-endeavour;
+    border-color: $color-endeavour;
+  }
 
   &--active {
     color: $color-white;
 
     background-color: $color-cerulean-blue;
+    border-color: $color-cerulean-blue;
+
+    @include hover-focus {
+      color: $color-white;
+    }
   }
 
   @include mobile {

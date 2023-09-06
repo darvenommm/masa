@@ -4913,6 +4913,12 @@ input {
   color: #316dc2;
   border: 1px solid #316dc2;
 }
+.news__button:hover:not(:disabled) {
+  color: #316dc2;
+}
+.news__button:focus-visible:not(:disabled) {
+  color: #316dc2;
+}
 @media (max-width: 1199px) {
   .news__button {
     padding: 14px 20px;
@@ -5182,16 +5188,36 @@ input {
   font-weight: 400;
   line-height: 125%;
   background-color: rgba(0, 0, 0, 0);
-  -webkit-transition: color 300ms, background-color 300ms;
-  transition: color 300ms, background-color 300ms;
   border-radius: 50%;
-  border: none;
+  -webkit-transition: color 300ms, background-color 300ms, border-color 300ms;
+  transition: color 300ms, background-color 300ms, border-color 300ms;
+  border: 1px solid rgba(0, 0, 0, 0);
   width: 32px;
   height: 32px;
+}
+.news__pagination-button:hover:not(:disabled) {
+  color: #316dc2;
+  border-color: #316dc2;
+}
+.news__pagination-button:focus-visible:not(:disabled) {
+  color: #316dc2;
+  border-color: #316dc2;
+}
+.news__pagination-button:active:not(:disabled) {
+  color: #ffffff;
+  background-color: #275699;
+  border-color: #275699;
 }
 .news__pagination-button--active {
   color: #ffffff;
   background-color: #316dc2;
+  border-color: #316dc2;
+}
+.news__pagination-button--active:hover:not(:disabled) {
+  color: #ffffff;
+}
+.news__pagination-button--active:focus-visible:not(:disabled) {
+  color: #ffffff;
 }
 @media (max-width: 767px) {
   .news__pagination-button {
