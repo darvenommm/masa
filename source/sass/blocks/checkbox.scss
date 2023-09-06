@@ -46,7 +46,11 @@ $checkbox__trans-time: 200ms;
     height: 20px;
   }
 
-  @include hover-focus {
+  input:focus ~ label[data-checkbox="icon"] {
+    border-color: $color-text-default;
+  }
+
+  @include hover {
     label[data-checkbox="icon"] {
       border-color: $color-text-default;
     }
@@ -118,7 +122,11 @@ $checkbox__trans-time: 200ms;
       border: 1px solid rgba($color-white, 0.7);
     }
 
-    @include hover-focus {
+    input:focus ~ label[data-checkbox="icon"] {
+      border-color: $color-white;
+    }
+
+    @include hover {
       label[data-checkbox="icon"] {
         border-color: $color-white;
       }

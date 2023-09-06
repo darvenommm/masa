@@ -23,7 +23,17 @@ export const addHeaderButtonsHandlers = () => {
 
 export const addHandlersForHeaderButton = (selector, callback) => {
   const button = document.querySelector(selector);
+
+  if (!button) {
+    return;
+  }
+
   const content = button.nextElementSibling;
+
+  if (!content) {
+    return;
+  }
+
   const innerLinks = content.querySelectorAll(CONTENT_INNER_LINK_SELECTOR);
 
   innerLinks.forEach((link, index) => {

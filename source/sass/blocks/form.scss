@@ -91,7 +91,7 @@
     font-size: 14px;
     line-height: 142.86%;
 
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
 }
 
@@ -107,9 +107,28 @@
   }
 
   @include mobile {
-    gap: 26px;
+    gap: 0;
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+  }
+}
+
+.form__name-input,
+.form__phone-input {
+  @include mobile {
+    margin-bottom: 26px;
+  }
+}
+
+.form__message-input {
+  @include mobile {
+    margin-bottom: 13px;
+  }
+}
+
+.form__select {
+  @include mobile {
+    margin-bottom: 23px;
   }
 }
 

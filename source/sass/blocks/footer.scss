@@ -21,7 +21,7 @@
 
 .footer__logo {
   @include mobile {
-    margin-bottom: 20px;
+    margin-bottom: 11px;
   }
 }
 
@@ -45,9 +45,9 @@
 
   @include mobile {
     justify-content: center;
-    gap: 20px 30px;
+    gap: 5px 30px;
 
-    margin-bottom: 20px;
+    margin-bottom: 13px;
   }
 }
 
@@ -93,6 +93,10 @@
   @include tablet {
     order: 1;
     gap: 10px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(3, 26px);
   }
 }
 

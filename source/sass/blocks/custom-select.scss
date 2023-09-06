@@ -42,6 +42,14 @@
 .custom-select__button {
   border-width: 1px;
   border-color: rgba($color-text-default, 0.3);
+
+  &:focus {
+    border-width: 1px;
+  }
+
+  @include hover {
+    border-width: 1px;
+  }
 }
 
 .custom-select__list {
@@ -86,6 +94,14 @@
 .custom-select--light {
   .custom-select__button {
     border-color: rgba($color-white, 0.3);
+
+    @include hover-focus {
+      border-color: $color-white;
+    }
+
+    @include active {
+      border-color: $color-white;
+    }
   }
 
   .custom-select__icon {

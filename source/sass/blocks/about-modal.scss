@@ -1,8 +1,18 @@
+.about-modal__wrapper {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .about-modal__content {
   border-radius: 16px;
 
   width: 510px;
-  padding: 60px 80px;
+  padding: 53px 80px;
+
+  @include tablet {
+    padding: 56px 80px;
+    padding-bottom: 63px;
+  }
 
   @include mobile {
     width: 90.63vw;
@@ -52,17 +62,19 @@
   text-align: center;
 
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 
   @include tablet {
     font-size: 28px;
     line-height: 100%;
+
+    margin-bottom: 13px;
   }
 
   @include mobile {
     font-size: 18px;
 
-    margin-bottom: 15px;
+    margin-bottom: 5px;
   }
 }
 
@@ -72,7 +84,7 @@
   line-height: 162.5%;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 19px;
 
   @include tablet {
     line-height: 125%;
@@ -82,18 +94,61 @@
     font-size: 14px;
     line-height: 142.86%;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 }
 
 .about-modal__form-inner {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 17px;
 
-  margin-bottom: 30px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    gap: 11px;
+  }
+
+  @include mobile {
+    gap: 6px;
+
+    margin-bottom: 22px;
+  }
+}
+
+.about-modal__active-element {
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 128.57%;
+
+    @include tablet {
+      line-height: 142.86%;
+    }
+
+    @include mobile {
+      line-height: 100%;
+    }
+  }
+}
+
+.about-modal__select {
+  @include mobile {
+    .about-modal__select-button {
+      height: 40px;
+
+      margin-bottom: 9px;
+    }
+  }
 }
 
 .about-modal__submit {
+  gap: 29px;
+
+  padding-left: 27px;
   margin: 0 auto;
+
+  @include mobile {
+    width: 100%;
+  }
 }

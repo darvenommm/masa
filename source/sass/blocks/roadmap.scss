@@ -86,9 +86,7 @@
 }
 
 .roadmap__picture {
-  $border-radius: 18px;
-
-  border-radius: $border-radius;
+  border-radius: 5%;
 
   picture {
     width: 49px;
@@ -96,7 +94,7 @@
   }
 
   img {
-    border-radius: $border-radius;
+    border-radius: 5%;
 
     width: 100%;
   }
@@ -108,15 +106,17 @@
       width: 100%;
       height: auto;
     }
-
-    img {
-      width: auto;
-    }
   }
 
   @include mobile {
+    border-radius: 8%;
+
     picture {
       aspect-ratio: 1 / 0.69;
+    }
+
+    img {
+      border-radius: 8%;
     }
   }
 }
