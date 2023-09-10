@@ -6,7 +6,7 @@ const LAYER_URL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const CENTER = [55.028522, 82.928281];
 const ZOOM = 17;
 
-const ICON_URL = '../img/svg/map-marker.svg';
+const ICON_URL = './img/svg/map-marker.svg';
 const ICON_SIZE = [70, 70];
 const ICON_ANCHOR = [40, 70];
 const POPUP_ANCHOR = [-6, -70];
