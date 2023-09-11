@@ -17,19 +17,11 @@ const addMenuHandlersForHeight = () => {
   }
 
   const setMenuHeight = () => {
-    const menuChild = menu.children[0];
+    const top = menu.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const height = windowHeight - top;
 
-    menuChild.style.height = 'auto';
-
-    setTimeout(() => {
-      const top = menuChild.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      const height = windowHeight - top;
-
-      const menuHeight = menuChild.scrollHeight;
-
-      menuChild.style.height = `${menuHeight < height ? menuHeight : height}px`;
-    });
+    menu.style.maxHeight = `${height}px`;
   };
 
   window.addEventListener('resize', setMenuHeight);
