@@ -73,7 +73,7 @@
   @include hover {
     color: $color-cerulean-blue;
 
-    background-color: $transparent;
+    background-color: $color-white;
   }
 
   @include active-focus {

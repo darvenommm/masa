@@ -2849,7 +2849,7 @@ use {
 
 .custom-select__item:hover:not(:disabled) {
   color: #316dc2;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #ffffff;
 }
 
 .custom-select__item:active:not(:disabled) {
@@ -3064,17 +3064,6 @@ use {
   padding-left: 20px;
 }
 
-.button::before {
-  position: absolute;
-  inset: -1px;
-  -webkit-transition: opacity 300ms;
-  transition: opacity 300ms;
-  opacity: 0;
-  border-radius: 30px;
-  border: 3px solid #000000;
-  content: "";
-}
-
 .button:hover:not(:disabled) {
   background-color: #316dc2;
 }
@@ -3105,10 +3094,6 @@ use {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-}
-
-.button:focus-visible:not(:disabled)::before {
-  opacity: 1;
 }
 
 .button:active:not(:disabled) {
