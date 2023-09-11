@@ -17,7 +17,7 @@
     line-height: 147.06%;
 
     margin: 0;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 
   @include mobile {
@@ -28,23 +28,36 @@
   }
 }
 
-.news__buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
+.news__buttons-container {
+  text-align: center;
 
-  list-style: none;
-
-  padding: 0;
-  margin: 0;
   margin-bottom: 37px;
 
   @include tablet {
-    gap: 10px;
-
     margin-bottom: 28px;
+  }
+
+  @include mobile {
+    margin-bottom: 10px;
+  }
+}
+
+.news__buttons {
+  display: inline-flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  list-style: none;
+
+  align-self: center;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 100%;
+
+  @include tablet {
+    gap: 10px;
   }
 
   @include mobile {
@@ -55,7 +68,6 @@
     overflow-x: auto;
 
     padding-bottom: 14px;
-    margin-bottom: 10px;
   }
 }
 
@@ -67,6 +79,7 @@
   letter-spacing: 0.28px;
   text-transform: uppercase;
 
+  background-color: $transparent;
   transition: color $trans-default, border-color $trans-default;
   border-radius: 20px;
 
@@ -150,6 +163,7 @@
   }
 
   @include tablet {
+    aspect-ratio: 1 / 1.08;
     padding-top: 0;
     height: auto;
     width: auto;
@@ -157,6 +171,7 @@
   }
 
   @include mobile {
+    aspect-ratio: 1.21 / 1;
     min-height: 240px;
     padding-top: 0;
   }
@@ -419,6 +434,7 @@
   }
 
   @include mobile {
+    aspect-ratio: 1 / 1.14;
     min-height: 330px;
 
     .news__subtitle {

@@ -15,6 +15,8 @@
   }
 
   img {
+    border-radius: 16px;
+
     width: 100%;
     height: auto;
   }
@@ -98,7 +100,7 @@
 .form__inner {
   display: flex;
   flex-direction: column;
-  gap: 17px;
+  gap: 16px;
 
   margin-bottom: 40px;
 

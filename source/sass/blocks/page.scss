@@ -10,18 +10,6 @@
   }
 }
 
-.page__hero {
-  padding: 409px 0 60px;
-
-  @include tablet {
-    padding-top: 676px;
-  }
-
-  @include mobile {
-    padding: 233px 0 20px;
-  }
-}
-
 .page__about {
   padding: 118px 0 120px;
 

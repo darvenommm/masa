@@ -28,7 +28,7 @@
 .footer__links {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 31px;
   flex-wrap: wrap;
 
   transition: color $trans-default;
@@ -36,6 +36,10 @@
 
   padding: 0;
   margin: 0;
+
+  @include vp-1280 {
+    gap: 17px;
+  }
 
   @include tablet {
     gap: 15px;
@@ -57,7 +61,7 @@
 
   transition: color $trans-default;
 
-  padding: 20px 0;
+  margin: 20px 0;
 
   @include hover-focus {
     color: $color-cerulean-blue;

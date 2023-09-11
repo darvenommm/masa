@@ -79,6 +79,11 @@
 
   position: relative;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+
   border-radius: $border-radius;
 
   padding: 280px 51px 20px 20px;
@@ -109,11 +114,18 @@
   }
 
   @include tablet {
+    aspect-ratio: 1 / 1.07;
     padding: 285px 41px 21px 20px;
   }
 
   @include mobile {
+    aspect-ratio: 1 / 1;
     padding: 271px 10px 17px;
+    max-height: 625px;
+  }
+
+  @include vp-400 {
+    aspect-ratio: 1 / 1.38;
   }
 }
 

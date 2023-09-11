@@ -3,6 +3,7 @@ import {isMobile} from 'is-mobile';
 import Swiper from '../../vendor/swiper';
 
 const SLIDER_SELECTOR = '#hero__slider';
+const SLIDE_SELECTOR = '.hero__slide';
 const PARENT_SELECTOR = '.hero';
 const PAGINATION_BUTTONS_SELECTOR = '.hero__pagination-buttons';
 const PAGINATION_BUTTON_SELECTOR = '.hero__pagination-button';
@@ -48,7 +49,7 @@ const changePaginationButtons = (swiper, index) => {
 
       button.addEventListener('click', () => {
         swiper.slideTo(buttonIndex + 1);
-        scheduleChangingToNextSlide(swiper);
+        // scheduleChangingToNextSlide(swiper);
       });
     });
   });
@@ -64,7 +65,22 @@ const sliderChangeHandler = (swiper) => {
 
   changePaginationButtons(swiper, currentSlideIndex);
 
-  scheduleChangingToNextSlide(swiper);
+  // scheduleChangingToNextSlide(swiper);
+};
+
+const addHandlersForFocus = (slider) => {
+  const slides = document.querySelectorAll(SLIDE_SELECTOR);
+
+  slides.forEach((slide, index) => {
+    const activeElements = slide.querySelectorAll('a, button');
+
+    activeElements.forEach((element) => {
+      element.addEventListener('focus', () => {
+        slider.slideTo(index);
+        // scheduleChangingToNextSlide(slider);
+      });
+    });
+  });
 };
 
 export const initHeroSlider = () => {
@@ -79,6 +95,8 @@ export const initHeroSlider = () => {
       slideChange: sliderChangeHandler,
     },
   });
+
+  addHandlersForFocus(swiper);
 
   return swiper;
 };

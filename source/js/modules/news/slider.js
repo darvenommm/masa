@@ -12,6 +12,7 @@ const PAGINATION_SELECTOR = '#news__slider-pagination';
 const PAGINATION_LIST_CLASS = 'news__pagination-list';
 const PAGINATION_BUTTON_CLASS = 'news__pagination-button';
 const PAGINATION_BUTTON_CLASS_ACTIVE = 'news__pagination-button--active';
+const SLIDE_SELECTOR = '.news__slide';
 
 const renderCustom = (_, current, total) => {
   let result = '';
@@ -53,6 +54,37 @@ const sliderResizeHandler = (swiper) => {
     wasFirstRun = false;
     return new Swiper(SLIDER_SELECTOR, options);
   }
+};
+
+const addHandlersForEqualHeight = (slider) => {
+  const callback = () => {
+    const width = window.innerWidth;
+    const slides = document.querySelectorAll(SLIDE_SELECTOR);
+
+    if (width < settings.desktopBreakpoint) {
+      slides.forEach((slide) => {
+        slide.style.height = 'auto';
+      });
+
+      return;
+    }
+
+    let maxHeight = 0;
+    slides.forEach((slide) => {
+      const height = slide.offsetHeight;
+
+      if (maxHeight < height) {
+        maxHeight = height;
+      }
+    });
+
+    slides.forEach((slide) => {
+      slide.style.height = `${maxHeight}px`;
+    });
+  };
+
+  const observer = new MutationObserver(callback);
+  observer.observe(slider, {childList: true, subtree: true, characterData: true});
 };
 
 const addSliderHandlersForRightOrder = (slider) => {
@@ -207,6 +239,7 @@ const options = {
 export const initNewsSlider = () => {
   const slider = new Swiper(SLIDER_SELECTOR, options);
   addSliderHandlersForRightOrder(slider);
+  addHandlersForEqualHeight(slider.el);
 
   return slider;
 };

@@ -1,16 +1,34 @@
+$button__border-radius: 30px;
+
 .button {
+  position: relative;
+
   display: flex;
   align-items: center;
   gap: 20px;
 
-  border-radius: 30px;
+  border-radius: $button__border-radius;
   background-color: $color-white;
   transition: background-color $trans-default;
+  outline: none;
 
   border: 1px solid $color-cerulean-blue;
   margin: 0;
   padding: 4px;
   padding-left: 20px;
+
+  &::before {
+    position: absolute;
+    inset: -1px;
+
+    transition: opacity $trans-default;
+    opacity: 0;
+    border-radius: $button__border-radius;
+
+    border: 3px solid #000000;
+
+    content: "";
+  }
 
   @include hover-focus {
     background-color: $color-cerulean-blue;
@@ -24,6 +42,12 @@
 
       background-color: $color-white;
       transform: rotate(45deg);
+    }
+  }
+
+  @include focus {
+    &::before {
+      opacity: 1;
     }
   }
 

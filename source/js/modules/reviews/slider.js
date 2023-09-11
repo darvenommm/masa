@@ -10,6 +10,37 @@ const PREV_BUTTON_SELECTOR = '#reviews__slider-prev';
 const NEXT_BUTTON_SELECTOR = '#reviews__slider-next';
 const SCROLLBAR_SELECTOR = '#reviews__scrollbar > span';
 
+const SLIDE_SELECTOR = '.reviews__slide';
+
+const addHandlersForEqualHeight = (slider) => {
+  const callback = () => {
+    const slides = document.querySelectorAll(SLIDE_SELECTOR);
+
+    slides.forEach((slide) => {
+      slide.style.height = 'auto';
+    });
+
+    setTimeout(() => {
+      let maxHeight = 0;
+      slides.forEach((slide) => {
+        const slideHeight = slide.clientHeight;
+
+        if (maxHeight < slideHeight) {
+          maxHeight = slideHeight;
+        }
+      });
+
+      slides.forEach((slide) => {
+        slide.style.height = `${maxHeight}px`;
+      });
+    });
+  };
+
+  window.addEventListener('resize', callback);
+  const observer = new MutationObserver(callback);
+  observer.observe(slider, {childList: true, subtree: true, characterData: true});
+};
+
 export const initReviewsSlider = () => {
   const scrollbar = new SwiperScrollbar(SCROLLBAR_SELECTOR);
 
@@ -45,5 +76,9 @@ export const initReviewsSlider = () => {
     },
   });
 
-  return slider;
+  if (!slider.el) {
+    return;
+  }
+
+  addHandlersForEqualHeight(slider.el);
 };

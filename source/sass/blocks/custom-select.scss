@@ -70,7 +70,13 @@
 
   padding: 17px 20px;
 
-  @include hover-focus {
+  @include hover {
+    color: $color-cerulean-blue;
+
+    background-color: $transparent;
+  }
+
+  @include active-focus {
     color: $color-white;
 
     border-color: $color-white;

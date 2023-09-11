@@ -38,9 +38,31 @@
   }
 }
 
+@mixin active-focus {
+  @include active {
+    @content;
+  }
+
+  @include focus {
+    @content;
+  }
+}
+
 // Desktop first
 @mixin vp-1919 {
   @media (max-width: ($vp-1920 - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-1400 {
+  @media (max-width: 1399px) {
+    @content;
+  }
+}
+
+@mixin vp-1280 {
+  @media (max-width: 1279px) {
     @content;
   }
 }
@@ -53,6 +75,12 @@
 
 @mixin mobile {
   @media (max-width: ($tablet-to-mobile - 1px)) {
+    @content;
+  }
+}
+
+@mixin vp-400 {
+  @media (max-width: 399px) {
     @content;
   }
 }
