@@ -49,7 +49,7 @@ const changePaginationButtons = (swiper, index) => {
 
       button.addEventListener('click', () => {
         swiper.slideTo(buttonIndex + 1);
-        // scheduleChangingToNextSlide(swiper);
+        scheduleChangingToNextSlide(swiper);
       });
     });
   });
@@ -65,7 +65,7 @@ const sliderChangeHandler = (swiper) => {
 
   changePaginationButtons(swiper, currentSlideIndex);
 
-  // scheduleChangingToNextSlide(swiper);
+  scheduleChangingToNextSlide(swiper);
 };
 
 const addHandlersForFocus = (slider) => {
@@ -77,7 +77,7 @@ const addHandlersForFocus = (slider) => {
     activeElements.forEach((element) => {
       element.addEventListener('focus', () => {
         slider.slideTo(index);
-        // scheduleChangingToNextSlide(slider);
+        scheduleChangingToNextSlide(slider);
       });
     });
   });
