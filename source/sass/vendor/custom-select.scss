@@ -121,20 +121,8 @@
     &[aria-selected="true"] {
       background-color: rgba(0, 0, 0, 0.2);
 
-      @media (hover: hover) {
-        &:hover:not(.focus-visible) {
-          background-color: rgba(0, 0, 0, 0.2);
-        }
-      }
-
       &.focus-visible:focus {
         background-color: rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    @media (hover: hover) {
-      &:hover:not(.focus-visible) {
-        background-color: rgba(0, 0, 0, 0.4);
       }
     }
 
