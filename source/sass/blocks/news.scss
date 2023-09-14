@@ -206,12 +206,20 @@
 
   &::before {
     left: 0;
-    bottom: 100%;
+    bottom: calc(100% - 1px);
   }
 
   &::after {
-    left: 100%;
+    left: calc(100% - 1px);
     bottom: 0;
+  }
+
+  @include tablet {
+    top: 2px;
+  }
+
+  @include mobile {
+    top: 0;
   }
 }
 
@@ -232,7 +240,7 @@
 
   &::before {
     position: absolute;
-    left: 100%;
+    left: calc(100% - 1px);
     bottom: 0;
 
     background-image: var(--news__decoration-corner);
@@ -244,14 +252,18 @@
   }
 
   @include tablet {
+    top: 1px;
+
     font-size: 20px;
     line-height: 120%;
 
-    padding: 5px 18px 0 0;
+    padding: 9px 18px 0 0;
     width: 206px;
   }
 
   @include mobile {
+    top: 0;
+
     font-size: 16px;
     line-height: 112.5%;
 
@@ -276,7 +288,7 @@
 
   &::before {
     position: absolute;
-    left: 100%;
+    left: calc(100% - 1px);
     bottom: 0;
 
     background-image: var(--news__decoration-corner);
@@ -420,7 +432,7 @@
     padding-top: 0;
 
     .news__subtitle {
-      padding-top: 4px;
+      padding-top: 7px;
       padding-bottom: 1px;
       width: 207px;
     }

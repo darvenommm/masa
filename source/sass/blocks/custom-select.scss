@@ -70,6 +70,10 @@
 
   padding: 17px 20px;
 
+  &[aria-selected="true"] {
+    background-color: $color-white;
+  }
+
   @include hover {
     color: $color-cerulean-blue;
 
