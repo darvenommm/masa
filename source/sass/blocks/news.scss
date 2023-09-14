@@ -130,6 +130,7 @@
 
 .news__slide {
   position: relative;
+  top: 2px;
 
   display: flex;
   flex-direction: column;
@@ -179,6 +180,7 @@
 
 .news__date {
   position: relative;
+  top: 1px;
 
   color: $color-cerulean-blue;
   font-size: 12px;
@@ -213,18 +215,11 @@
     left: calc(100% - 1px);
     bottom: 0;
   }
-
-  @include tablet {
-    top: 2px;
-  }
-
-  @include mobile {
-    top: 0;
-  }
 }
 
 .news__subtitle {
   position: relative;
+  top: 1px;
 
   color: $color-cerulean-blue;
   font-size: 24px;
@@ -252,8 +247,6 @@
   }
 
   @include tablet {
-    top: 1px;
-
     font-size: 20px;
     line-height: 120%;
 
@@ -262,8 +255,6 @@
   }
 
   @include mobile {
-    top: 0;
-
     font-size: 16px;
     line-height: 112.5%;
 

@@ -122,6 +122,10 @@
     aspect-ratio: 1 / 1;
     padding: 271px 10px 17px;
     max-height: 625px;
+
+    picture {
+      right: -19px;
+    }
   }
 
   @include vp-400 {

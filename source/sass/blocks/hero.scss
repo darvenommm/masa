@@ -115,6 +115,7 @@
 
 .hero__pagination-buttons {
   position: relative;
+  top: 1px;
 
   display: grid;
   grid-template-columns: repeat(3, 10px);
