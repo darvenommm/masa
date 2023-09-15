@@ -2847,10 +2847,6 @@ use {
   padding: 17px 20px;
 }
 
-.custom-select__item[aria-selected=true] {
-  background-color: #ffffff;
-}
-
 .custom-select__item:hover:not(:disabled) {
   color: #316dc2;
   background-color: #ffffff;
@@ -2865,6 +2861,16 @@ use {
 .custom-select__item:focus-visible:not(:disabled) {
   color: #ffffff;
   border-color: #ffffff;
+  background-color: #316dc2;
+}
+
+.custom-select__item[aria-selected=true] {
+  color: #ffffff;
+  background-color: #316dc2;
+}
+
+.custom-select__item[aria-selected=true]:hover:not(:disabled) {
+  color: #ffffff;
   background-color: #316dc2;
 }
 
@@ -2905,6 +2911,16 @@ use {
 
 .custom-select--light .custom-select__list {
   border-color: #ffffff;
+}
+
+.custom-select--light .custom-select__item[aria-selected=true] {
+  color: #ffffff;
+  background-color: #316dc2;
+}
+
+.custom-select--light .custom-select__item[aria-selected=true]:hover:not(:disabled) {
+  color: #ffffff;
+  background-color: #316dc2;
 }
 
 .checkbox {
@@ -4160,6 +4176,7 @@ use {
 
 .programs__subtitle {
   position: relative;
+  top: 1px;
   display: inline-block;
   color: #316dc2;
   font-size: 24px;
@@ -5654,7 +5671,6 @@ use {
   }
 
   .programs__subtitle {
-    top: 1px;
     font-size: 20px;
     line-height: 120%;
     min-width: 173px;
@@ -6115,7 +6131,6 @@ use {
   }
 
   .hero__pagination-buttons {
-    top: 0;
     gap: 10px;
     padding: 0 16px;
     width: 84px;
@@ -6181,6 +6196,7 @@ use {
 
   .hero__button-container {
     position: relative;
+    top: -1px;
     background-color: #ffffff;
     border-radius: 0 0 14px 14px;
     padding: 9px 12px 10px 15px;
@@ -6363,7 +6379,6 @@ use {
   }
 
   .programs__subtitle {
-    top: 0;
     font-size: 16px;
     line-height: 112.5%;
     padding: 18px;
@@ -6499,9 +6514,14 @@ use {
   }
 
   .news__slide {
+    top: 3px;
     aspect-ratio: 1.21/1;
     min-height: 240px;
     padding-top: 0;
+  }
+
+  .news__date {
+    top: 2px;
   }
 
   .news__subtitle {

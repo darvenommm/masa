@@ -70,10 +70,6 @@
 
   padding: 17px 20px;
 
-  &[aria-selected="true"] {
-    background-color: $color-white;
-  }
-
   @include hover {
     color: $color-cerulean-blue;
 
@@ -85,6 +81,18 @@
 
     border-color: $color-white;
     background-color: $color-cerulean-blue;
+  }
+
+  &[aria-selected="true"] {
+    color: $color-white;
+
+    background-color: $color-cerulean-blue;
+
+    @include hover {
+      color: $color-white;
+
+      background-color: $color-cerulean-blue;
+    }
   }
 }
 
@@ -124,5 +132,17 @@
 
   .custom-select__list {
     border-color: $color-white;
+  }
+
+  .custom-select__item[aria-selected="true"] {
+    color: $color-white;
+
+    background-color: $color-cerulean-blue;
+
+    @include hover {
+      color: $color-white;
+
+      background-color: $color-cerulean-blue;
+    }
   }
 }

@@ -172,6 +172,8 @@
   }
 
   @include mobile {
+    top: 3px;
+
     aspect-ratio: 1.21 / 1;
     min-height: 240px;
     padding-top: 0;
@@ -214,6 +216,10 @@
   &::after {
     left: calc(100% - 1px);
     bottom: 0;
+  }
+
+  @include mobile {
+    top: 2px;
   }
 }
 

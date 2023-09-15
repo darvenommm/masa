@@ -148,8 +148,6 @@
   }
 
   @include mobile {
-    top: 0;
-
     gap: 10px;
 
     padding: 0 16px;
@@ -314,6 +312,7 @@
 
   @include mobile {
     position: relative;
+    top: -1px;
 
     background-color: $color-white;
     border-radius: 0 0 14px 14px;

@@ -135,6 +135,7 @@
 
 .programs__subtitle {
   position: relative;
+  top: 1px;
 
   display: inline-block;
 
@@ -166,8 +167,6 @@
   }
 
   @include tablet {
-    top: 1px;
-
     font-size: 20px;
     line-height: 120%;
 
@@ -175,8 +174,6 @@
   }
 
   @include mobile {
-    top: 0;
-
     font-size: 16px;
     line-height: 112.5%;
 
